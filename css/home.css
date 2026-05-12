@@ -1,0 +1,526 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #7a5a3a;
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(122, 90, 58);
+    font-weight: bold;
+}
+
+.slider {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* gambar */
+.slides img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.slides img.active {
+    opacity: 1;
+}
+
+/* overlay biar teks jelas */
+.slider::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* HERO TEXT */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    color: white;
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 20px;
+}
+
+/* dots */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.dot.active {
+    opacity: 1;
+    background: yellow;
+}
+
+/* SECTION TENTANG */
+.tentang {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #f5f5f5;
+}
+
+.logo-tentang {
+    width: 80px;
+    margin-bottom: 5px;
+}
+    
+.tentang h2 {
+    color: #7a5a3a;
+    margin-bottom: 20px;
+}
+
+.tentang p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* tombol */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #8b6b4a;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6e5338;
+}
+
+/*SECTION SEKOLAH*/
+
+.sekolah {
+    padding: 15px 10px;
+    background-color: #987554;
+    text-align: center;
+}
+
+.judul-sekolah h2 {
+    color: white;
+    font-size: 36px;
+}
+
+/* Container */
+.school-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* CARD SEKOLAH */
+.school-card {
+    width: 120px;
+    background-color: #806144;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer; /* cursor jadi tangan */
+}
+
+/* Hover */
+.school-card:hover {
+    transform: translateY(-10px);
+    background-color: #ffd54f; /* warna kuning */
+}
+
+/* Logo sekolah */
+.school-card img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: white;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Nama sekolah */
+.school-card h3 {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Jumlah anggota */
+.school-card p {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+}
+
+/* =========================
+   POPUP SEKOLAH
+========================= */
+
+.school-popup {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    z-index: 999;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Saat popup aktif */
+.school-popup.active {
+    display: flex;
+}
+
+/* Tombol close */
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* Header popup */
+.popup-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.popup-header img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.popup-header h2 {
+    color: white;
+    font-size: 40px;
+}
+
+/* Gallery popup */
+.popup-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    max-width: 1200px;
+}
+
+/* Foto anggota */
+.popup-gallery img {
+    width: 220px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.popup-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.galery-container img {
+    width: 100px;
+    height: 85px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*SECTION GALLERY*/
+.gallery {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Judul */
+.gallery-title {
+    margin-bottom: 10px;
+}
+
+.gallery-title h2 {
+    color: #7a5a3a;
+    font-size: 36px;
+}
+
+/* CONTAINER GALLERY */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    scrollbar-width: none;
+}
+
+/* Card */
+.gallery-card {
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/*Hover*/
+.gallery-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Gambar */
+.gallery-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* Zoom gambar saat hover */
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Info */
+.gallery-info {
+    padding: 15px;
+}
+
+/* Judul kegiatan */
+.gallery-info h3 {
+    margin: 0;
+    color: #7a5a3a;
+    font-size: 18px;
+}
+
+/*Tanggal*/
+.gallery-info p {
+    margin-top: 8px;
+    color: gray;
+    font-size: 14px;
+}
+
+/* Hover card */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.gallery-card img {
+    transition: 0.4s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(70%);
+}
+
+/*LIGHTBOX*/
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gambar fullscreen */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    animation: zoom 0.3s;
+}
+
+/* Tombol close */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* Animasi */
+@keyframes zoom {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/*Footer*/
+
+.footer {
+    position: relative;
+    background: url("../assets/img/footer-bg.png") center/cover no-repeat;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+/* Overlay gelap */
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+/* Isi footer */
+.footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Logo */
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-logo h2 {
+    color: white;
+    margin: 10px 0 5px;
+}
+
+.footer-logo p {
+    color: #ddd;
+}
+
+/* Kontak */
+.footer-contact p {
+    color: white;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Sosmed */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+/* Tombol sosmed */
+.footer-social a {
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover */
+.footer-social a:hover {
+    transform: scale(1.1);
+    background: #ffd54f;
+}
+
+.footer-social i {
+    font-size: 24px;
+}

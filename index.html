@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>FOSBON</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/img/logo_FOSBON.png" alt="logo">
+            <h1>FORUM OSIS KOTA BONTANG</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Profil</a>
+            <a href="#">Galeri</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="slider">
+
+    <div class="slides">
+        <img src="assets/img/bghome1.png" class="slide active">
+        <img src="assets/img/bghome2.png" class="slide">
+    </div>
+
+    <!--slide-->
+    <div class="dots">
+        <span onclick="gantiSlide(0)" class="dot active"></span>
+        <span onclick="gantiSlide(1)" class="dot"></span>
+    </div>
+
+    <!--teks-->
+    <div class="hero-text">
+        <h2>BERSAMA KITA MEMBANGUN KOTA BONTANG</h2>
+        <p>Integrasi organisasi luar yang menjadi suatu forum untuk membangun kota bontang.</p>
+    </div>
+
+</section>
+
+<!-- TENTANG ORGANISASI -->
+<section class="tentang">
+    
+    <img src="assets/img/logo_FOSBON.png" alt="logo" class="logo-tentang">
+    <h2>Tentang Organisasi FOSBON</h2>
+    <p>Forum OSIS Kota Bontang merupakan wadah komunikasi, kolaborasi, dan pengembangan bagi pengurus OSIS tingkat SMP/MTs dan SMA/SMK/MAN di Kota Bontang. FOSBON hadir sebagai ruang bagi para pelajar untuk saling bertukar ide, membangun relasi, serta menciptakan program-program yang inspiratif, edukatif, dan berdampak positif bagi lingkungan sekitar.
+    </p>
+    <a href="#" class="btn">Selengkapnya</a>
+
+</section>
+
+<!-- SECTION SEKOLAH -->
+<section class="sekolah">
+
+    <!-- Judul -->
+    <div class="judul-sekolah">
+        <h2>16 Sekolah Bergabung</h2>
+    </div>
+
+    <!-- Container Card -->
+    <div class="school-container">
+
+        <div class="school-card" onclick="bukaSekolah('SMPN1')">
+            <img src="assets/img/SPANSA-LOGO.png" alt="SMPN 1">
+            <h3>SMPN 1 BTG</h3>
+            <p>5</p>
+        </div>
+        <!-- Popup -->
+         <div class="school-popup" id="SMPN1">
+            <span class="close-popup"
+                onclick="tutupSekolah('SMPN1')">
+                &times;
+            </span>
+            <div class="popup-header">
+                <img src="assets/img/SPANSA-LOGO.png">
+                <h2>SMPN 1 BTG</h2>
+            </div>
+
+            <div class="popup-gallery">
+                <img src="assets/img/FEED INDIVIDU (SPANSA).png">
+                <img src="assets/img/FEED INDIVIDU (SPANSA) (2).png">
+                <img src="assets/img/FEED INDIVIDU (SPANSA) (3).png">
+                <img src="assets/img/FEED INDIVIDU (SPANSA) (4).png">
+                <img src="assets/img/FEED INDIVIDU (SPANSA) (5).png">
+            </div>
+         </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMPN5')">
+            <img src="assets/img/SMPN5-LOGO.png" alt="SMPN 5">
+            <h3>SMPN 5 BTG</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="SMPN5">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMPN5')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMPN5-LOGO.png">
+                    <h2>SMPN 5 BTG</h2>
+                </div>
+    
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMP5).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMPN8')">
+            <img src="assets/img/SMPN8-LOGO.png" alt="SMPN 8">
+            <h3>SMPN 8 BTG</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="SMPN8">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMPN8')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMPN8-LOGO.png">
+                    <h2>SMPN 8 BTG</h2>
+                </div>
+    
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMPN8).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('YABIS')">
+            <img src="assets/img/YABIS-LOGO.png" alt="SMP YABIS">
+            <h3>SMP IT YABIS</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="YABIS">
+                <span class="close-popup"
+                    onclick="tutupSekolah('YABIS')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/YABIS-LOGO.png">
+                    <h2>SMP IT YABIS</h2>
+                </div>
+    
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (YABIS).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('YPK')">
+            <img src="assets/img/YPK-LOGO.png" alt="SMP YPK">
+            <h3>SMP YPK</h3>
+            <p>3</p>
+        </div>
+            <div class="school-popup" id="YPK">
+                <span class="close-popup"
+                    onclick="tutupSekolah('YPK')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/YPK-LOGO.png">
+                    <h2>SMP YPK</h2>
+                </div>
+
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (YPK).png">
+                    <img src="assets/img/FEED INDIVIDU (YPK) (2).png">
+                    <img src="assets/img/FEED INDIVIDU (YPK) (3).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMAN1')">
+            <img src="assets/img/SMANSA-LOGO.png" alt="SMAN 1">
+            <h3>SMAN 1 BTG</h3>
+            <p>2</p>
+        </div>
+        <div class="school-popup" id="SMAN1">
+            <span class="close-popup"
+                onclick="tutupSekolah('SMAN1')">
+                &times;
+            </span>
+            <div class="popup-header">
+                <img src="assets/img/SMANSA-LOGO.png">
+                <h2>SMAN 1 BTG</h2>
+            </div>
+            <div class="popup-gallery">
+                <img src="assets/img/FEED INDIVIDU (SMAN1).png">
+                <img src="assets/img/FEED INDIVIDU (SMAN1) (2).png">
+            </div>
+        </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMAN2')">
+            <img src="assets/img/SMANDA-LOGO.png" alt="SMAN 2">
+            <h3>SMAN 2 BTG</h3>
+            <p>3</p>
+        </div>
+            <div class="school-popup" id="SMAN2">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMAN2')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMANDA-LOGO.png">
+                    <h2>SMAN 2 BTG</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMAN2).png">
+                    <img src="assets/img/FEED INDIVIDU (SMAN2) (2).png">
+                    <img src="assets/img/FEED INDIVIDU (SMAN2) (3).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMAN3')">
+            <img src="assets/img/SMANTIG-LOGO.png" alt="SMAN 3">
+            <h3>SMAN 3 BTG</h3>
+            <p>3</p>
+        </div>
+            <div class="school-popup" id="SMAN3">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMAN3')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMANTIG-LOGO.png">
+                    <h2>SMAN 3 BTG</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMAN3).png">
+                    <img src="assets/img/FEED INDIVIDU (SMAN3) (2).png">
+                    <img src="assets/img/FEED INDIVIDU (SMAN3) (3).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMKN1')">
+            <img src="assets/img/SMAKEN-LOGO.png" alt="SMKN 1">
+            <h3>SMKN 1 BTG</h3>
+            <p>3</p>
+        </div>
+            <div class="school-popup" id="SMKN1">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMKN1')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMAKEN-LOGO.png">
+                    <h2>SMKN 1 BTG</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMKN1).png">
+                    <img src="assets/img/FEED INDIVIDU (SMKN1) (2).png">
+                    <img src="assets/img/FEED INDIVIDU (SMKN1) (3).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMKN3')">
+            <img src="assets/img/SMKN3-LOGO.png" alt="SMKN 3">
+            <h3>SMKN 3 BTG</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="SMKN3">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMKN3')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMKN3-LOGO.png">
+                    <h2>SMKN 3 BTG</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMKN3).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('YABIS2')">
+            <img src="assets/img/YABIS-LOGO.png" alt="SMA IT YABIS">
+            <h3>SMA IT YABIS</h3>
+            <p>2</p>
+        </div>
+        <div class="school-popup" id="YABIS2">
+            <span class="close-popup"
+                onclick="tutupSekolah('YABIS2')">
+                &times;
+            </span>
+            <div class="popup-header">
+                <img src="assets/img/YABIS-LOGO.png">
+                <h2>SMA IT YABIS</h2>
+            </div>
+            <div class="popup-gallery">
+                <img src="assets/img/FEED INDIVIDU (YABIS SMA).png">
+                <img src="assets/img/FEED INDIVIDU (YABIS SMA) (2).png">
+            </div>
+        </div>
+
+        <div class="school-card" onclick="bukaSekolah('BU')">
+            <img src="assets/img/BU-LOGO.png" alt="SMA BU">
+            <h3>SMA BU BTG</h3>
+            <p>2</p>
+        </div>
+            <div class="school-popup" id="BU">
+                <span class="close-popup"
+                    onclick="tutupSekolah('BU')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/BU-LOGO.png">
+                    <h2>SMA BU BTG</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (BU).png">
+                    <img src="assets/img/FEED INDIVIDU (BU) (2).png">
+                </div>
+            </div>
+        
+        <div class="school-card" onclick="bukaSekolah('DHBS')">
+            <img src="assets/img/DHBS-LOGO.png" alt="SMAS IT DHBS">
+            <h3>SMAS IT DHBS</h3>
+            <p>2</p>
+        </div>
+        <div class="school-popup" id="DHBS">
+            <span class="close-popup"
+                onclick="tutupSekolah('DHBS')">
+                &times;
+            </span>
+            <div class="popup-header">
+                <img src="assets/img/DHBS-LOGO.png">
+                <h2>SMAS IT DHBS</h2>
+            </div>
+            <div class="popup-gallery">
+                <img src="assets/img/FEED INDIVIDU (DHBS).png">
+                <img src="assets/img/FEED INDIVIDU (DHBS) (2).png">
+            </div>
+        </div>
+
+        <div class="school-card" onclick="bukaSekolah('YPK2')">
+            <img src="assets/img/YPK-LOGO.png" alt="SMA YPK">
+            <h3>SMA YPK</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="YPK2">
+                <span class="close-popup"
+                    onclick="tutupSekolah('YPK2')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/YPK-LOGO.png">
+                    <h2>SMA YPK</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (YPK SMA).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('SMKN')">
+            <img src="assets/img/SMKN-LOGO.png" alt="SMK NUSANTARA">
+            <h3>SMKS NUSMAN</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="SMKN">
+                <span class="close-popup"
+                    onclick="tutupSekolah('SMKN')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/SMKN-LOGO.png">
+                    <h2>SMKS NUSMAN</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (SMKN).png">
+                </div>
+            </div>
+
+        <div class="school-card" onclick="bukaSekolah('YKPP')">
+            <img src="assets/img/YKPP-LOGO.png" alt="SMKS YKPP">
+            <h3>SMKS YKPP</h3>
+            <p>1</p>
+        </div>
+            <div class="school-popup" id="YKPP">
+                <span class="close-popup"
+                    onclick="tutupSekolah('YKPP')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="assets/img/YKPP-LOGO.png">
+                    <h2>SMKS YKPP</h2>
+                </div>
+                <div class="popup-gallery">
+                    <img src="assets/img/FEED INDIVIDU (YKPP).png">
+                </div>
+            </div>
+    </div>
+</section>
+
+<!-- SECTION GALLERY -->
+<section class="gallery">
+    <!-- Judul -->
+    <div class="gallery-title">
+        <h2>Galeri Kegiatan</h2>
+    </div>
+
+    <!--Container-->
+    <div class="gallery-container">
+        <!--Item-->
+        <div class="gallery-card">
+            <img src="assets/img/GALLERY-FOSBON (3).png" 
+                alt="Kegiatan 3"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>Pelantikan Pengurus</h3>
+                <p>14 Februari 2026</p>
+            </div>
+        </div>
+
+        <!--Item-->
+        <div class="gallery-card">
+            <img src="assets/img/GALLERY-FOSBON (5).png" 
+                alt="Kegiatan 2"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>Malam Keakraban</h3>
+                <p>15 Februari 2026</p>
+            </div>
+        </div>
+
+        <!--Item-->
+        <div class="gallery-card">
+            <img src="assets/img/GALLERY-FOSBON (1).png" 
+                alt="Kegiatan 1"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>Rapat kerja</h3>
+                <p>28 Februari 2026</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/GALLERY-FOSBON (4).png" 
+                alt="Kegiatan 4"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>Kegiatan FOSRAN</h3>
+                <p>14 Maret 2026</p>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <img src="assets/img/GALLERY-FOSBON.png" 
+                alt="Kegiatan 4"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>FOSBON CLASS</h3>
+                <p>2 Mei 2026</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="tutupGallery()">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <!-- Overlay -->
+    <div class="footer-overlay"></div>
+    <!-- Isi Footer -->
+    <div class="footer-content">
+
+        <!-- Logo -->
+        <div class="footer-logo">
+            <img src="assets/img/logo_FOSBON.png" alt="logo">
+            <h2>FOSBON</h2>
+            <p>Forum OSIS Kota Bontang</p>
+        </div>
+
+        <!-- Kontak -->
+        <div class="footer-contact">
+            <p>📞 0813-5633-4842 (Nazwa)</p>
+            <p>✉️ forumosiskotabontang@gmail.com</p>
+            <p>📍 Kota Bontang</p>
+        </div>
+
+        <div class="footer-social">
+            <!-- Instagram -->
+             <a href="https://instagram.com/fosbontang_" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <!-- YouTube -->
+             <a href="https://whatsapp.com/channel/0029Vb7ZDetKbYMSpuc1kv3F" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/home.js"></script>
+
+</body>
+</html>
