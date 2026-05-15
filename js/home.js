@@ -16,6 +16,9 @@ function gantiSlide(index) {
     });
 }
 
+// NAVBAR MOBILE & DROPDOWN MOBILE
+// (dipindahkan ke js/nav.js agar konsisten di semua halaman)
+
 // DOT otomatis mengikuti jumlah slide
 (function initDots() {
     const container = document.querySelector('.dots');

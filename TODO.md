@@ -1,15 +1,23 @@
-# TODO - Visi & Misi (profil-visimisi)
+# TODO - Perbaikan UI (Navbar responsif + Gallery)
 
-## Step 1
-- Update struktur di `profil-visimisi.html` (wrap Visi+Misi, tambah elemen dekoratif khusus bagian Visi & Misi)
-✅ Done
+## 1) Navbar responsif (burger + dropdown bersarang)
+- Ubah `index.html` dan `galeri.html`:
+  - ganti menu Home/Profil/Galeri/Kontak jadi wrapper `.nav-links`.
+  - tambahkan tombol burger untuk toggle dropdown.
+  - Pastikan Profil tetap bisa buka submenu (Visi & Misi, Struktur Organisasi) dan masing-masing masih bisa diklik.
+- Update CSS `css/home.css` untuk responsif navbar:
+  - definisikan `.nav-toggle`, `.nav-links`, dropdown behavior pada layar kecil.
 
+## 2) Layout responsif biar rapi saat width mengecil
+- Tambahkan breakpoint di `css/home.css` dan `css/gallery.css`:
+  - atur flex/grid agar elemen tidak “nempel posisi laptop”.
 
-## Step 2
-- Update styling di `css/profil.css` (background/gradasi/overlay untuk section Visi & Misi, kartu misi lebih nyatu dengan tema)
-✅ Done
-
-## Step 3
-- Jalankan build/cek cepat (buka halaman di browser) untuk memastikan tidak merusak FAQ & Footer
-
+## 3) Redesign gallery (konsisten + maksimal 6 gambar saat popup)
+- Ubah `galeri.html`:
+  - setiap card cukup tampil kotak + thumbnail(s) kecil (bukan deskripsi panjang).
+  - saat card diklik, buka popup yang menampilkan maksimal 6 gambar dokumentasi.
+- Ubah `css/gallery.css`:
+  - pastikan card pakai ukuran fixed + gambar sebagai thumbnail konsisten (object-fit cover/contain dengan tinggi tetap).
+- Ubah `js/gallery.js`:
+  - implementasi logic popup multi-image (maks 6) + tanpa mengharuskan deskripsi panjang.
 

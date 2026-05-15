@@ -17,20 +17,32 @@
             <img src="assets/img/logo-fosbon.png" alt="logo">
             <h1>FORUM OSIS KOTA BONTANG</h1>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <!-- DROPDOWN PROFIL -->
-            <div class="dropdown">
-                <a href="#">Profil</a>
+
+        <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+
+            <!-- Parent DROPDOWN PROFIL -->
+            <div class="dropdown nav-item">
+                <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    Profil
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
+
                 <div class="dropdown-content">
                     <a href="profil-visimisi.html">Visi & Misi</a>
                     <a href="profil-struktur.html">Struktur Organisasi</a>
                 </div>
             </div>
-            <a href="galeri.html">Galeri</a>
-            <a href="kontak.html">Kontak</a>
+
+            <a href="galeri.html" class="nav-item">Galeri</a>
+            <a href="kontak.html" class="nav-item">Kontak</a>
         </nav>
     </header>
+
     <!-- divisi pembina -->
     <div class="divisi-box">
         <h2 class="divisi-title">PEMBINA FOSBON</h2>
@@ -318,6 +330,8 @@
     </div>
 </footer>
 
+
+    <script src="js/nav.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>
