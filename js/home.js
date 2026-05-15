@@ -1,41 +1,53 @@
 let slides = document.querySelectorAll('.slide');
-let dots = document.querySelectorAll('.dot');
 
 function gantiSlide(index) {
-
     // hapus active dari semua gambar
     slides.forEach(slide => {
         slide.classList.remove('active');
     });
 
-    // hapus active dari semua dot
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-
     // tambahkan active ke gambar yang dipilih
-    slides[index].classList.add('active');
+    if (slides[index]) slides[index].classList.add('active');
 
-    // tambahkan active ke dot yang dipilih
-    dots[index].classList.add('active');
+    // sync dot otomatis (kalau ada)
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
 }
+
+// DOT otomatis mengikuti jumlah slide
+(function initDots() {
+    const container = document.querySelector('.dots');
+    if (!container) return;
+
+    // hapus dot lama (biar ngikut kalau slide nambah)
+    container.innerHTML = '';
+
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.onclick = () => gantiSlide(i);
+        frag.appendChild(dot);
+    }
+    container.appendChild(frag);
+})();
+
 
 let current = 0;
 
 setInterval(() => {
-
     current++;
 
-    if(current >= slides.length) {
+    if (current >= slides.length) {
         current = 0;
     }
 
     gantiSlide(current);
-
 }, 4000);
 
 // LIGHTBOX GALLERY
-
 function bukaGallery(element) {
     let lightbox = document.getElementById("lightbox");
     let lightboxImg = document.getElementById("lightbox-img");
@@ -43,29 +55,30 @@ function bukaGallery(element) {
     lightboxImg.src = element.src;
 }
 
-// Tutup gallery
-function tutupGallery() {
-    document.getElementById("lightbox").style.display = "none";
+// Tutup gallery jika klik overlay hitam
+function tutupGallery(event) {
+
+    let lightbox = document.getElementById("lightbox");
+
+    // hanya tutup kalau klik background hitam
+    if (event.target.id === "lightbox") {
+        lightbox.style.display = "none";
+    }
 }
 
 // BUKA POPUP SEKOLAH
+// HTML popup: <div class="school-popup" id="SMPN1">...
+// CSS: .school-popup { display: none; } dan .school-popup.active { display: flex; }
 function bukaSekolah(id) {
-
-    document.getElementById("popup-" + id)
-    .style.display = "block";
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add("active");
 }
 
 // TUTUP POPUP
 function tutupSekolah(id) {
-
-    document.getElementById("popup-" + id)
-    .style.display = "none";
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove("active");
 }
 
-function bukaSekolah(id) {
-    document.getElementById(id).classList.add("active");
-}
-
-function tutupSekolah(id) {
-    document.getElementById(id).classList.remove("active");
-}

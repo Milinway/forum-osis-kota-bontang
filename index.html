@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -16,18 +17,29 @@
             <h1>FORUM OSIS KOTA BONTANG</h1>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Profil</a>
-            <a href="#">Galeri</a>
-            <a href="#">Kontak</a>
+            <a href="index.html">Home</a>
+            
+            <!--DROPDOWN PROFIL-->
+            <div class="dropdown">
+                <a href="#">Profil</a>
+                <div class="dropdown-content">
+                    <a href="profil-visimisi.html">Visi & Misi</a>
+                    <a href="profil-struktur.html">Struktur Organisasi</a>
+                </div>
+            </div>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
         </nav>
     </header>
 
     <section class="slider">
-
     <div class="slides">
         <img src="assets/img/bg-home(1).png" class="slide active">
         <img src="assets/img/bg-home(2).png" class="slide">
+        <img src="assets/img/bg-home(3).png" class="slide">
+        <img src="assets/img/bg-home(4).png" class="slide">
+        <img src="assets/img/bg-home(5).png" class="slide">
+        <img src="assets/img/bg-home(6).png" class="slide">
     </div>
 
     <!--slide-->
@@ -403,13 +415,34 @@
 
     <!--Container-->
     <div class="gallery-container">
+
+        <!--Item-->
+        <div class="gallery-card">
+            <img src="assets/img/gallery-fosbon(6).jpg" 
+                alt="Kegiatan 3"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>MUSYAWARAH BESAR KE 9</h3>
+                <p>14 Desember 2025</p>
+            </div>
+        </div>
+        <!--Item-->
+        <div class="gallery-card">
+            <img src="assets/img/gallery-fosbon(7).png" 
+                alt="Kegiatan 3"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>LDK</h3>
+                <p>11 Januari 2026</p>
+            </div>
+        </div>
         <!--Item-->
         <div class="gallery-card">
             <img src="assets/img/gallery-fosbon(3).png" 
                 alt="Kegiatan 3"
                 onclick="bukaGallery(this)">
             <div class="gallery-info">
-                <h3>Pelantikan Pengurus</h3>
+                <h3>PELANTIKAN PENGURUS</h3>
                 <p>14 Februari 2026</p>
             </div>
         </div>
@@ -420,7 +453,7 @@
                 alt="Kegiatan 2"
                 onclick="bukaGallery(this)">
             <div class="gallery-info">
-                <h3>Malam Keakraban</h3>
+                <h3>MALAM KEAKRABAN</h3>
                 <p>15 Februari 2026</p>
             </div>
         </div>
@@ -431,8 +464,18 @@
                 alt="Kegiatan 1"
                 onclick="bukaGallery(this)">
             <div class="gallery-info">
-                <h3>Rapat kerja</h3>
+                <h3>RAPAT KERJA</h3>
                 <p>28 Februari 2026</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/gallery-fosbon(2).jpeg" 
+                alt="Kegiatan 4"
+                onclick="bukaGallery(this)">
+            <div class="gallery-info">
+                <h3>BUKBER</h3>
+                <p>14 Maret 2026</p>
             </div>
         </div>
 
@@ -441,7 +484,7 @@
                 alt="Kegiatan 4"
                 onclick="bukaGallery(this)">
             <div class="gallery-info">
-                <h3>Kegiatan FOSRAN</h3>
+                <h3>FOSRAN</h3>
                 <p>14 Maret 2026</p>
             </div>
         </div>
@@ -458,14 +501,16 @@
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <span class="close" onclick="tutupGallery()">&times;</span>
+<div class="lightbox" id="lightbox" onclick="tutupGallery(event)">
+
+    <span class="close">&times;</span>
+
     <img id="lightbox-img">
+
 </div>
 
 <!-- FOOTER -->
 <footer class="footer">
-
     <!-- Overlay -->
     <div class="footer-overlay"></div>
     <!-- Isi Footer -->

@@ -1,0 +1,743 @@
+
+/* =========================
+   NAVBAR
+========================= */
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #7a5a3a;
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(122, 90, 58);
+    font-weight: bold;
+}
+
+/* DROPDOWN PROFIL */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #eee;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    margin: 0;
+    padding: 10px 12px;
+    color: rgb(122, 90, 58);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background: #ffd54f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* =========================
+   VISI MISI PROFIL
+========================= */
+
+.visi-misi {
+    padding: 70px 20px;
+    background: #987554;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* LAYER BACKGROUND */
+.visi-misi-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(255, 213, 79, 0.35), transparent 45%),
+        radial-gradient(circle at 90% 25%, rgba(233, 187, 136, 0.25), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(92, 61, 34, 0.22), transparent 45%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08));
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.visi-misi-glow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    left: 50%;
+    top: -120px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(255, 213, 79, 0.35), rgba(255, 213, 79, 0) 60%);
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+.visi-misi-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.visi-logo {
+    width: 95px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+}
+
+/* LABEL KECIL */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    /* Besarin label */
+    padding: 14px 22px;
+    border-radius: 999px;
+
+    background: rgba(233, 187, 136, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #fffaf5;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    font-size: 18px;
+}
+
+
+.section-label i {
+    color: #ffd54f;
+}
+
+.section-label-misi {
+    margin-top: 20px;
+}
+
+/* =========================
+   VISI
+========================= */
+
+.visi-box {
+    background: linear-gradient(180deg, rgba(233, 187, 136, 0.98), rgba(233, 187, 136, 0.85));
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 70px;
+
+    padding: 50px 35px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.visi-box::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: radial-gradient(circle at 20% 0%, rgba(255, 213, 79, 0.35), transparent 45%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* hover */
+.visi-box:hover {
+    transform: translateY(-8px);
+}
+
+.visi-box p {
+    color: #3d2a17;
+    font-size: 22px;
+    line-height: 1.8;
+
+    max-width: 750px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   MISI
+========================= */
+
+.misi-section {
+    padding-bottom: 20px;
+}
+
+.misi-section h2 {
+    color: #ffffff;
+    font-size: 38px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* CONTAINER */
+.misi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* CARD */
+.misi-card {
+    background: linear-gradient(180deg, rgba(233, 187, 136, 0.98), rgba(233, 187, 136, 0.85));
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+    position: relative;
+
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+    overflow: hidden;
+}
+
+.misi-card::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -80px;
+    top: -80px;
+    background: radial-gradient(circle, rgba(255, 213, 79, 0.35), transparent 60%);
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* hover */
+.misi-card:hover {
+    transform: translateY(-10px);
+}
+
+/* lingkaran aksen (bubble) */
+.misi-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #5c3d22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.misi-icon img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+/* isi text */
+.misi-card p {
+
+    color: #3d2a17;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 768px) {
+    .visi-box {
+        padding: 35px 20px;
+    }
+
+    .visi-box h2,
+    .misi-section h2 {
+        font-size: 30px;
+    }
+
+    .visi-box p {
+        font-size: 18px;
+    }
+
+    .misi-card {
+        padding: 25px 20px;
+    }
+
+    .misi-card p {
+        font-size: 15px;
+    }
+
+    .visi-section h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================
+   STRUKTUR PROFIL
+========================= */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #987554;
+}
+
+/* SECTION UMUM */
+.profile-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* JUDUL */
+.profile-title {
+    margin-bottom: 50px;
+}
+
+.profile-title img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.profile-title h1 {
+    color: #7a5a3a;
+    font-size: 40px;
+    margin: 0;
+}
+
+.profile-title p {
+    color: #555;
+    margin-top: 10px;
+}
+
+/* =========================
+   STRUKTUR ORGANISASI
+========================= */
+
+.struktur-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* JUDUL */
+.struktur-title h1 {
+    color: #7a5a3a;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/* SUB JUDUL */
+.jabatan-title {
+    color: #8b6b4a;
+    font-size: 28px;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}
+
+/* CONTAINER */
+.anggota-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* CARD ANGGOTA */
+.anggota-card {
+    width: 120px;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+/* hover */
+.anggota-card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOTO */
+.anggota-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+/* NAMA */
+.anggota-card h3 {
+    margin-top: 18px;
+    margin-bottom: 5px;
+
+    color: #333;
+    font-size: 18px;
+}
+
+/* JABATAN */
+.anggota-card p {
+    color: #8b6b4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/*DIVISI*/
+
+.divisi-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Judul divisi */
+.divisi-title {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* Ketua divisi */
+.divisi-card {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* hover */
+.divisi-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Foto ketua */
+.divisi-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Nama */
+.divisi-card h3 {
+    margin-top: 18px;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+/* Jabatan */
+.divisi-card p {
+    color: #8b6b4a;
+    font-weight: 600;
+}
+
+/* Container anggota */
+.divisi-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Card anggota */
+.anggota-card {
+    width: 180px;
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* hover */
+.anggota-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Foto anggota */
+.anggota-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Nama anggota */
+.anggota-card h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Role */
+.anggota-card p {
+    color: #8b6b4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.divisi-img {
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+/*Footer*/
+
+.footer {
+    position: relative;
+    background: url("../assets/img/footer-bg.png") center/cover no-repeat;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+/* Overlay gelap */
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+/* Isi footer */
+.footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Logo */
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-logo h2 {
+    color: white;
+    margin: 10px 0 5px;
+}
+
+.footer-logo p {
+    color: #ddd;
+}
+
+/* Kontak */
+.footer-contact p {
+    color: white;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Sosmed */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+/* Tombol sosmed */
+.footer-social a {
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover */
+.footer-social a:hover {
+    transform: scale(1.1);
+    background: #ffd54f;
+}
+
+.footer-social i {
+    font-size: 24px;
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq-section {
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+/* JUDUL */
+.faq-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-title h2 {
+    font-size: 38px;
+    color: #7a5a3a;
+    margin-bottom: 10px;
+}
+
+.faq-title p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* CONTAINER */
+.faq-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ITEM */
+.faq-item {
+    background: white;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+/* hover */
+.faq-item:hover {
+    transform: translateY(-3px);
+}
+
+/* BUTTON PERTANYAAN */
+.faq-question {
+    width: 100%;
+    padding: 25px 30px;
+
+    border: none;
+    outline: none;
+
+    background: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #5c3d22;
+
+    cursor: pointer;
+}
+
+/* ICON */
+.faq-icon {
+    transition: 0.3s;
+}
+
+/* JAWABAN */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.4s ease;
+
+    background: #fffaf5;
+}
+
+.faq-answer p {
+    padding: 0 30px 25px;
+    margin: 0;
+
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .faq-title h2 {
+        font-size: 30px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .faq-answer p {
+        padding: 0 20px 20px;
+        font-size: 15px;
+    }
+
+}

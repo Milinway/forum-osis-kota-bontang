@@ -35,6 +35,42 @@ nav a {
     font-weight: bold;
 }
 
+/* DROPDOWN PROFIL */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #eee;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    margin: 0;
+    padding: 10px 12px;
+    color: rgb(122, 90, 58);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background: #ffd54f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .slider {
     position: relative;
     height: 60vh;
@@ -105,7 +141,7 @@ nav a {
     border-radius: 50%;
     cursor: pointer;
     opacity: 0.5;
-}
+}   
 
 .dot.active {
     opacity: 1;
@@ -325,23 +361,46 @@ nav a {
 }
 
 /* CONTAINER GALLERY */
+/* CONTAINER GALLERY */
 .gallery-container {
     display: flex;
     gap: 20px;
+
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 10px;
-    scrollbar-width: none;
+
+    padding: 10px 5px 20px;
+
+    scrollbar-width: thin;
+
+    justify-content: flex-start;
+}
+
+/* Scrollbar Chrome */
+.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background: #b08a64;
+    border-radius: 10px;
 }
 
 /* Card */
 .gallery-card {
     width: 250px;
+
+    min-width: 250px;
+
     background: white;
     border-radius: 15px;
     overflow: hidden;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
     transition: 0.3s;
+
+    flex-shrink: 0;
 }
 
 /*Hover*/
@@ -418,7 +477,10 @@ nav a {
     max-width: 90%;
     max-height: 90%;
     border-radius: 15px;
+
     animation: zoom 0.3s;
+
+    cursor: default;
 }
 
 /* Tombol close */
