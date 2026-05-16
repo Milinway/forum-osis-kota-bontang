@@ -459,7 +459,7 @@ nav a {
     max-width: 1200px;
 }
 
-/* Foto anggota */
+/* Foto anggota (desktop default) */
 .popup-gallery img {
     width: 220px;
     border-radius: 10px;
@@ -469,6 +469,81 @@ nav a {
 
 .popup-gallery img:hover {
     transform: scale(1.05);
+}
+
+/* =========================
+   CAROUSEL SEKOLAH
+========================= */
+
+.popup-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.popup-gallery-viewport {
+    display: contents;
+}
+
+.popup-gallery-img {
+    width: 220px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.popup-nav {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .popup-gallery {
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .popup-gallery-viewport {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 260px;
+    }
+
+    .popup-gallery-img {
+        display: none;
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .popup-gallery-img.active {
+        display: block;
+    }
+
+    .popup-nav {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: rgba(255,255,255,0.18);
+        color: white;
+
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .popup-nav:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
 }
 
 .galery-container img {

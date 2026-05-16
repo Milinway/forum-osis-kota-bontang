@@ -75,6 +75,26 @@ function tutupGallery(event) {
 function bukaSekolah(id) {
     const el = document.getElementById(id);
     if (!el) return;
+
+    // Reset carousel aktif saat popup dibuka
+    const viewports = el.querySelectorAll('.popup-gallery-viewport');
+    viewports.forEach((vp) => {
+        const imgs = vp.querySelectorAll('.popup-gallery-img');
+        imgs.forEach((img, i) => img.classList.toggle('active', i === 0));
+
+        // Disable/enable tombol sesuai jumlah gambar
+        const popupGallery = vp.closest('.popup-gallery');
+        if (!popupGallery) return;
+        const prevBtn = popupGallery.querySelector('.popup-prev');
+        const nextBtn = popupGallery.querySelector('.popup-next');
+        const count = imgs.length;
+        const disabled = count <= 1;
+        if (prevBtn) prevBtn.disabled = disabled;
+        if (nextBtn) nextBtn.disabled = disabled;
+        if (prevBtn) prevBtn.style.opacity = disabled ? '0.4' : '1';
+        if (nextBtn) nextBtn.style.opacity = disabled ? '0.4' : '1';
+    });
+
     el.classList.add("active");
 }
 
@@ -84,4 +104,67 @@ function tutupSekolah(id) {
     if (!el) return;
     el.classList.remove("active");
 }
+
+(function initSchoolCarousel() {
+
+    function isMobile() {
+        return window.matchMedia("(max-width: 768px)").matches;
+    }
+
+    function setupPopupGallery(popupGallery) {
+        const imgs = popupGallery.querySelectorAll(".popup-gallery-img");
+        const prevBtn = popupGallery.querySelector(".popup-prev");
+        const nextBtn = popupGallery.querySelector(".popup-next");
+
+        if (!imgs.length) return;
+
+        const onlyOne = imgs.length <= 1;
+
+        if (prevBtn) prevBtn.disabled = onlyOne;
+        if (nextBtn) nextBtn.disabled = onlyOne;
+
+        if (isMobile()) {
+            let hasActive = Array.from(imgs).some(img => img.classList.contains("active"));
+
+            if (!hasActive) {
+                imgs[0].classList.add("active");
+            }
+        } else {
+            imgs.forEach(img => img.classList.remove("active"));
+        }
+    }
+
+    document.querySelectorAll(".popup-gallery").forEach(setupPopupGallery);
+
+    document.addEventListener("click", function(e) {
+        const btn = e.target.closest(".popup-prev, .popup-next");
+        if (!btn || btn.disabled || !isMobile()) return;
+
+        const popupGallery = btn.closest(".popup-gallery");
+        const imgs = popupGallery.querySelectorAll(".popup-gallery-img");
+
+        if (imgs.length <= 1) return;
+
+        let currentIndex = Array.from(imgs).findIndex(img => img.classList.contains("active"));
+
+        if (currentIndex === -1) currentIndex = 0;
+
+        imgs[currentIndex].classList.remove("active");
+
+        if (btn.classList.contains("popup-next")) {
+            currentIndex++;
+            if (currentIndex >= imgs.length) currentIndex = 0;
+        } else {
+            currentIndex--;
+            if (currentIndex < 0) currentIndex = imgs.length - 1;
+        }
+
+        imgs[currentIndex].classList.add("active");
+    });
+
+    window.addEventListener("resize", function() {
+        document.querySelectorAll(".popup-gallery").forEach(setupPopupGallery);
+    });
+
+})();
 
