@@ -75,55 +75,55 @@ const gallerySets = {
     ],
 
   ldk: [
-        "assets/img/galeri/ldk(1).png",
-        "assets/img/galeri/ldk(2).png",
-        "assets/img/galeri/ldk(3).png",
-        "assets/img/galeri/ldk(4).png",
-        "assets/img/galeri/ldk(5).png",
-        "assets/img/galeri/ldk(6).png",
-        "assets/img/galeri/ldk(7).png",
-        "assets/img/galeri/ldk(8).png",
+        "/assets/img/galeri/ldk(1).png",
+        "/assets/img/galeri/ldk(2).png",
+        "/assets/img/galeri/ldk(3).png",
+        "/assets/img/galeri/ldk(4).png",
+        "/assets/img/galeri/ldk(5).png",
+        "/assets/img/galeri/ldk(6).png",
+        "/assets/img/galeri/ldk(7).png",
+        "/assets/img/galeri/ldk(8).png",
     ],
 
     fosran: [
-        "assets/img/galeri/fosran(8).JPG",
-        "assets/img/galeri/fosran(9).JPG",
-        "assets/img/galeri/fosran(10).JPG",
-        "assets/img/galeri/fosran(11).JPG",
-        "assets/img/galeri/fosran(12).JPG",
-        "assets/img/galeri/fosran(13).JPG",
-        "assets/img/galeri/fosran(7).JPG",
+        "/assets/img/galeri/fosran(8).JPG",
+        "/assets/img/galeri/fosran(9).JPG",
+        "/assets/img/galeri/fosran(10).JPG",
+        "/assets/img/galeri/fosran(11).JPG",
+        "/assets/img/galeri/fosran(12).JPG",
+        "/assets/img/galeri/fosran(13).JPG",
+        "/assets/img/galeri/fosran(7).JPG",
     ],
 
     pelantikan: [
-        "assets/img/galeri/pelantikan(1).JPG",
-        "assets/img/galeri/pelantikan(2).JPG",
-        "assets/img/galeri/pelantikan(3).JPG",
-        "assets/img/galeri/pelantikan(4).JPG",
-        "assets/img/galeri/pelantikan(5).JPG",
-        "assets/img/galeri/pelantikan(6).JPG",
-        "assets/img/galeri/pelantikan(7).JPG",
+        "/assets/img/galeri/pelantikan(1).JPG",
+        "/assets/img/galeri/pelantikan(2).JPG",
+        "/assets/img/galeri/pelantikan(3).JPG",
+        "/assets/img/galeri/pelantikan(4).JPG",
+        "/assets/img/galeri/pelantikan(5).JPG",
+        "/assets/img/galeri/pelantikan(6).JPG",
+        "/assets/img/galeri/pelantikan(7).JPG",
     ],
 
     makrab: [
-        "assets/img/galeri/makrab(1).jpeg",
-        "assets/img/galeri/makrab(2).jpeg",
-        "assets/img/galeri/makrab(3).jpeg",
+        "/assets/img/galeri/makrab(1).jpeg",
+        "/assets/img/galeri/makrab(2).jpeg",
+        "/assets/img/galeri/makrab(3).jpeg",
     ],
 
     raker: [
-        "assets/img/galeri/raker.png",
+        "/assets/img/galeri/raker.png",
     ],
 
     bukber: [
-        "assets/img/galeri/bukber.jpeg",
+        "/assets/img/galeri/bukber.jpeg",
     ],
 
     fosclass: [
-        "assets/img/galeri/fosbonclass(1).JPG",
-        "assets/img/galeri/fosbonclass(2).jpg",
-        "assets/img/galeri/fosbonclass(3).JPG",
-        "assets/img/galeri/fosbonclass(4).JPG",
+        "/assets/img/galeri/fosbonclass(1).JPG",
+        "/assets/img/galeri/fosbonclass(2).jpg",
+        "/assets/img/galeri/fosbonclass(3).JPG",
+        "/assets/img/galeri/fosbonclass(4).JPG",
     ],
 
 };
