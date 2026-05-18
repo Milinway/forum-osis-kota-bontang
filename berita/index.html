@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Artikel</title>
+
+    <link rel="icon" type="image/png" href="/assets/img/logo-fosbon.png">
+    <link rel="stylesheet" href="/css/berita.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="/assets/img/logo-fosbon.png" alt="logo">
+            <h1>FORUM OSIS KOTA BONTANG</h1>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/berita/" class="nav-item">Berita</a>
+
+            <!-- Parent DROPDOWN PROFIL -->
+            <div class="dropdown nav-item">
+                <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    Profil
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/visi-misi/">Visi & Misi</a>
+                    <a href="/struktur/">Struktur Organisasi</a>
+                </div>
+            </div>
+
+            <a href="/galeri/" class="nav-item">Galeri</a>
+        </nav>
+    </header>
+
+    <!-- SECTION BERITA -->
+<section class="berita-section">
+
+    <div class="berita-title">
+        <h1>Berita FOSBON</h1>
+        <p>Informasi dan kabar terbaru Forum OSIS Kota Bontang</p>
+    </div>
+
+    <div class="berita-container">
+
+        <!-- CARD BERITA -->
+        <article class="berita-card">
+            <img src="/assets/img/gallery-fosbon(4).png" alt="Berita 1">
+
+            <div class="berita-info">
+                <p class="berita-date">06 MEI 2026</p>
+                <h2>FOSRAN 2026 Berjalan Lancar, Tebar Kepedulian di Bulan Ramadhan</h2>
+                <p class="berita-excerpt">
+                    Kegiatan FOSRAN (Forum OSIS Sahabat Ramadhan) telah berhasil dilaksanakan dengan lancar...</p>
+                    <a href="/berita/detail/?id=fosran2026" class="berita-link">
+                    Baca Selengkapnya
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- CARD BERITA -->
+        <article class="berita-card">
+            <img src="/assets/img/gallery-fosbon(2).png" alt="Berita 2">
+
+            <div class="berita-info">
+                <p class="berita-date">2 Mei 2026</p>
+
+                <h2>FOSBON CLASS 2026: “UNLEASHA” Jadi Wadah Pelajar Mengembangkan Public Speaking dan Rasa Percaya Diri</h2>
+
+                <p class="berita-excerpt">
+                    Forum OSIS Bontang (FOSBON) kembali menghadirkan kegiatan edukatif dan inspiratif melalui program...
+                </p>
+
+                <a href="/berita/detail/?id=fosbon-class" class="berita-link">
+                    Baca Selengkapnya
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- CARD BERITA -->
+        <article class="berita-card">
+            <img src="/assets/img/gallery-fosbon(7).png" alt="Berita 3">
+
+            <div class="berita-info">
+                <p class="berita-date">2 APR 2026</p>
+
+                <h2>LDK FORUM OSIS BONTANG: Membangun Jiwa Kepemimpinan dan Pengembangan Diri Pengurus OSIS</h2>
+
+                <p class="berita-excerpt">
+                    Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai...
+                </p>
+
+                <a href="/berita/detail/?id=ldk" class="berita-link">
+                    Baca Selengkapnya
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+    
+</section>
+
+<script src="/js/nav.js"></script>

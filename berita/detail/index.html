@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Artikel</title>
+
+    <link rel="icon" type="image/png" href="/assets/img/logo-fosbon.png">
+    <link rel="stylesheet" href="/css/berita.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="/assets/img/logo-fosbon.png" alt="logo">
+            <h1>FORUM OSIS KOTA BONTANG</h1>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/berita/" class="nav-item">Berita</a>
+
+            <!-- Parent DROPDOWN PROFIL -->
+            <div class="dropdown nav-item">
+                <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    Profil
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/visi-misi/">Visi & Misi</a>
+                    <a href="/struktur/">Struktur Organisasi</a>
+                </div>
+            </div>
+
+            <a href="/galeri/" class="nav-item">Galeri</a>
+        </nav>
+    </header>
+
+<section class="detail-section">
+
+    <a href="/berita/" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Kembali ke Berita
+    </a>
+
+    <article class="detail-card">
+
+        <h1 id="detail-title"></h1>
+
+        <p class="detail-date">
+            <i class="fa-regular fa-calendar"></i>
+            <span id="detail-date"></span>
+        </p>
+
+        <hr>
+
+        <img id="detail-img" class="detail-img">
+
+        <div id="detail-content"></div>
+
+    </article>
+
+</section>
+
+<script src="/js/berita.js"></script>
