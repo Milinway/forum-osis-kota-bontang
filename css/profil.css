@@ -870,3 +870,79 @@ body {
     }
 
 }
+
+/* =========================
+   RESPONSIVE PROFIL STRUKTUR - HP
+========================= */
+@media (max-width: 768px) {
+    .divisi-box {
+        margin-top: 35px;
+        padding: 0 12px;
+    }
+
+    .divisi-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .divisi-img {
+        width: min(85%, 320px);
+        margin-bottom: 18px;
+    }
+
+    .anggota-container,
+    .divisi-container {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 8px 4px 18px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .anggota-container::-webkit-scrollbar,
+    .divisi-container::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .anggota-container::-webkit-scrollbar-thumb,
+    .divisi-container::-webkit-scrollbar-thumb {
+        background: #e9bb88;
+        border-radius: 999px;
+    }
+
+    .anggota-card {
+        flex: 0 0 150px;
+        width: 150px;
+        padding: 12px;
+        scroll-snap-align: start;
+    }
+
+    .anggota-card img {
+        height: 180px;
+    }
+
+    .anggota-card h4 {
+        font-size: 14px;
+    }
+
+    .anggota-card p {
+        font-size: 12px;
+    }
+
+    .divisi-container {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 18px;
+    }
+
+    .divisi-card {
+        flex: 0 0 210px;
+        width: 210px;
+    }
+
+    .divisi-card img {
+        height: 220px;
+    }
+}

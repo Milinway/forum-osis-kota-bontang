@@ -71,7 +71,7 @@ function tutupMultiGallery() {
 const gallerySets = {
 
   musyawarah: [
-        "assets/img/galeri/musyawarah.jpg",
+        "/assets/img/galeri/musyawarah.jpg",
     ],
 
   ldk: [
