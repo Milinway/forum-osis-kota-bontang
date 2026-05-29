@@ -71,7 +71,7 @@ function tutupMultiGallery() {
 const gallerySets = {
 
   musyawarah: [
-        "/assets/img/galeri/musyawarah.jpg",
+        "/assets/img/galeri/musyawarah.png",
     ],
 
   ldk: [
@@ -86,29 +86,29 @@ const gallerySets = {
     ],
 
     fosran: [
-        "/assets/img/galeri/fosran(8).JPG",
-        "/assets/img/galeri/fosran(9).JPG",
-        "/assets/img/galeri/fosran(10).JPG",
-        "/assets/img/galeri/fosran(11).JPG",
-        "/assets/img/galeri/fosran(12).JPG",
-        "/assets/img/galeri/fosran(13).JPG",
-        "/assets/img/galeri/fosran(7).JPG",
+        "/assets/img/galeri/fosran(8).png",
+        "/assets/img/galeri/fosran(9).png",
+        "/assets/img/galeri/fosran(10).png",
+        "/assets/img/galeri/fosran(11).png",
+        "/assets/img/galeri/fosran(12).png",
+        "/assets/img/galeri/fosran(13).png",
+        "/assets/img/galeri/fosran(7).png",
     ],
 
     pelantikan: [
-        "/assets/img/galeri/pelantikan(1).JPG",
-        "/assets/img/galeri/pelantikan(2).JPG",
-        "/assets/img/galeri/pelantikan(3).JPG",
-        "/assets/img/galeri/pelantikan(4).JPG",
-        "/assets/img/galeri/pelantikan(5).JPG",
-        "/assets/img/galeri/pelantikan(6).JPG",
-        "/assets/img/galeri/pelantikan(7).JPG",
+        "/assets/img/galeri/pelantikan(1).png",
+        "/assets/img/galeri/pelantikan(2).png",
+        "/assets/img/galeri/pelantikan(3).png",
+        "/assets/img/galeri/pelantikan(4).png",
+        "/assets/img/galeri/pelantikan(5).png",
+        "/assets/img/galeri/pelantikan(6).png",
+        "/assets/img/galeri/pelantikan(7).png",
     ],
 
     makrab: [
-        "/assets/img/galeri/makrab(1).jpeg",
-        "/assets/img/galeri/makrab(2).jpeg",
-        "/assets/img/galeri/makrab(3).jpeg",
+        "/assets/img/galeri/makrab(1).png",
+        "/assets/img/galeri/makrab(2).png",
+        "/assets/img/galeri/makrab(3).png",
     ],
 
     raker: [
@@ -116,14 +116,14 @@ const gallerySets = {
     ],
 
     bukber: [
-        "/assets/img/galeri/bukber.jpeg",
+        "/assets/img/galeri/bukber.png",
     ],
 
     fosclass: [
-        "/assets/img/galeri/fosbonclass(1).JPG",
-        "/assets/img/galeri/fosbonclass(2).jpg",
-        "/assets/img/galeri/fosbonclass(3).JPG",
-        "/assets/img/galeri/fosbonclass(4).JPG",
+        "/assets/img/galeri/fosbonclass(1).png",
+        "/assets/img/galeri/fosbonclass(2).png",
+        "/assets/img/galeri/fosbonclass(3).png",
+        "/assets/img/galeri/fosbonclass(4).png",
     ],
 
 };
