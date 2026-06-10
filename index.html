@@ -25,13 +25,11 @@
             <a href="/" class="nav-item">Home</a>
             <a href="/berita/" class="nav-item">Berita</a>
 
-            <!-- Parent DROPDOWN PROFIL -->
             <div class="dropdown nav-item">
                 <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
                     Profil
                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </button>
-
                 <div class="dropdown-content">
                     <a href="/visi-misi/">Visi & Misi</a>
                     <a href="/struktur/">Struktur Organisasi</a>
@@ -51,13 +49,11 @@
         <img src="/assets/img/bg-home(6).png" class="slide">
     </div>
 
-    <!--slide-->
     <div class="dots">
         <span onclick="gantiSlide(0)" class="dot active"></span>
         <span onclick="gantiSlide(1)" class="dot"></span>
     </div>
 
-    <!--teks-->
     <div class="hero-text">
         <h2>BERSAMA KITA MEMBANGUN KOTA BONTANG</h2>
         <p>Integrasi organisasi dari seluruh pengurus OSIS SMP/MTS, SMA/K/MA Se-kota Bontang</p>
@@ -65,550 +61,85 @@
 
 </section>
 
-<!-- TENTANG ORGANISASI -->
-<section class="tentang">
-    
+<section class="event-section"> <!-- SECTION EVENT & KOLABORASI -->
+    <div class="event-title">
+        <h2>Event & Kolaborasi</h2>
+    </div>
+
+    <div class="event-card">
+        <div class="event-image">
+            <img src="/assets/img/logo-prograsa.png" alt="PROGRASA">
+        </div>
+        <div class="event-content">
+            <h3>Pendaftaran Peserta Dialog Prograsa</h3>
+            <span class="event-badge">Kolaborasi</span>
+            <p class="event-subtitle">
+                "Mengubah Gugup menjadi pengaruh: Seni Berbicara yang percaya diri dan menginspirasi pelajar Bontang"
+            </p>
+            <p class="event-description">
+                FOSBON berkolaborasi bersama PIK Remaja Green Leader SMKN 1 Bontang
+                menghadirkan kegiatan Dialog Prograsa (Progres Rasa), sebuah seminar dan
+                ruang diskusi inspiratif yang membahas public speaking,
+                pengembangan diri, serta cara membangun kepercayaan diri dalam
+                kehidupan sekolah maupun organisasi.
+            </p>
+            <div class="event-links">
+                <a href="https://www.instagram.com/prograsa.id/" target="_blank" class="event-btn">
+                    Kunjungi Instagram
+                </a>
+                <a href="https://bit.ly/pendaftarandialogprograsa" target="_blank" class="event-link">
+                    Daftar Sekarang →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tentang"> <!-- TENTANG ORGANISASI -->
     <img src="/assets/img/logo-fosbon.png" alt="logo" class="logo-tentang">
     <h2>Tentang Organisasi FOSBON</h2>
     <p>Forum OSIS Kota Bontang merupakan wadah komunikasi, kolaborasi, dan pengembangan bagi pengurus OSIS tingkat SMP/MTs dan SMA/SMK/MAN di Kota Bontang. FOSBON hadir sebagai ruang bagi para pelajar untuk saling bertukar ide, membangun relasi, serta menciptakan program-program yang inspiratif, edukatif, dan berdampak positif bagi lingkungan sekitar.
     </p>
     <a href="/visi-misi/" class="btn">Selengkapnya</a>
-
 </section>
 
-<!-- SECTION SEKOLAH -->
-<section class="sekolah">
-
-    <!-- Judul -->
+<section class="sekolah"> <!-- SECTION SEKOLAH -->
     <div class="judul-sekolah">
         <h2>16 Sekolah Bergabung</h2>
     </div>
-
-    <!-- Container Card -->
-    <div class="school-container">
-
-        <div class="school-card" onclick="bukaSekolah('SMPN1')">
-            <img src="/assets/img/logo-spansa.png" alt="SMPN 1">
-            <h3>SMPN 1 BTG</h3>
-            <p>5</p>
-        </div>
-        <!-- Popup -->
-         <div class="school-popup" id="SMPN1">
-            <span class="close-popup"
-                onclick="tutupSekolah('SMPN1')">
-                &times;
-            </span>
-            <div class="popup-header">
-                <img src="/assets/img/logo-spansa.png">
-                <h2>SMPN 1 BTG</h2>
-            </div>
-            
-            <div class="popup-gallery">
-                <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/spansa_ajeng.png">
-                    <img class="popup-gallery-img" src="/assets/img/spansa_annisa.png">
-                    <img class="popup-gallery-img" src="/assets/img/spansa_dwilya.png">
-                    <img class="popup-gallery-img" src="/assets/img/spansa_nopal.png">
-                    <img class="popup-gallery-img" src="/assets/img/spansa_rasya.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-            <div class="school-card" onclick="bukaSekolah('SMPN5')">
-                <img src="/assets/img/logo-smpn5.png" alt="SMPN 5">
-                <h3>SMPN 5 BTG</h3>
-                <p>1</p>
-            </div>
-            <div class="school-popup" id="SMPN5">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMPN5')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smpn5.png">
-                    <h2>SMPN 5 BTG</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button" disabled>‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/smpn5_asyifa.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button" disabled>›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMPN8')">
-            <img src="/assets/img/logo-smpn8.png" alt="SMPN 8">
-            <h3>SMPN 8 BTG</h3>
-            <p>1</p>
-        </div>
-            <div class="school-popup" id="SMPN8">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMPN8')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smpn8.png">
-                    <h2>SMPN 8 BTG</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button" disabled>‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/smpn8_najma.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button" disabled>›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('YABIS')">
-            <img src="/assets/img/logo-yabis.png" alt="SMP YABIS">
-            <h3>SMP IT YABIS</h3>
-            <p>1</p>
-        </div>
-            <div class="school-popup" id="YABIS">
-                <span class="close-popup"
-                    onclick="tutupSekolah('YABIS')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-yabis.png">
-                    <h2>SMP IT YABIS</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button" disabled>‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/smp_yabis_qiano.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button" disabled>›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('YPK')">
-            <img src="/assets/img/logo-ypk.png" alt="SMP YPK">
-            <h3>SMP YPK</h3>
-            <p>3</p>
-        </div>
-            <div class="school-popup" id="YPK">
-                <span class="close-popup"
-                    onclick="tutupSekolah('YPK')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-ypk.png">
-                    <h2>SMP YPK</h2>
-                </div>
-
-                <div class="popup-gallery">
-                <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/smp_ypk_firyal.png">
-                    <img class="popup-gallery-img" src="/assets/img/smp_ypk_nadine.png">
-                    <img class="popup-gallery-img" src="/assets/img/smp_ypk_ravil.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMAN1')">
-            <img src="/assets/img/logo-smansa.png" alt="SMAN 1">
-            <h3>SMAN 1 BTG</h3>
-            <p>2</p>
-        </div>
-        <div class="school-popup" id="SMAN1">
-            <span class="close-popup"
-                onclick="tutupSekolah('SMAN1')">
-                &times;
-            </span>
-            <div class="popup-header">
-                <img src="/assets/img/logo-smansa.png">
-                <h2>SMAN 1 BTG</h2>
-            </div>
-
-            <div class="popup-gallery">
-                <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/smansa_azka.png">
-                    <img class="popup-gallery-img" src="/assets/img/smansa_sabil.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMAN2')">
-            <img src="/assets/img/logo-smanda.png" alt="SMAN 2">
-            <h3>SMAN 2 BTG</h3>
-            <p>3</p>
-        </div>
-            <div class="school-popup" id="SMAN2">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMAN2')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smanda.png">
-                    <h2>SMAN 2 BTG</h2>
-                </div>
-                
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/smanda_khumaira.png">
-                    <img class="popup-gallery-img" src="/assets/img/smanda_najwa.png">
-                    <img class="popup-gallery-img" src="/assets/img/smanda_vebry.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMAN3')">
-            <img src="/assets/img/logo-smantig.png" alt="SMAN 3">
-            <h3>SMAN 3 BTG</h3>
-            <p>3</p>
-        </div>
-            <div class="school-popup" id="SMAN3">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMAN3')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smantig.png">
-                    <h2>SMAN 3 BTG</h2>
-                </div>
-
-                <div class="popup-gallery">
-                <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/smantig_aji.png">
-                    <img class="popup-gallery-img" src="/assets/img/smantig_mira.png">
-                    <img class="popup-gallery-img" src="/assets/img/smantig_vina.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMKN1')">
-            <img src="/assets/img/logo-smaken.png" alt="SMKN 1">
-            <h3>SMKN 1 BTG</h3>
-            <p>3</p>
-        </div>
-            <div class="school-popup" id="SMKN1">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMKN1')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smaken.png">
-                    <h2>SMKN 1 BTG</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button">‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/smaken_lutfha.png">
-                        <img class="popup-gallery-img" src="/assets/img/smaken_rasya.png">
-                        <img class="popup-gallery-img" src="/assets/img/smaken_nauval.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button">›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMKN3')">
-            <img src="/assets/img/logo-smkn3.png" alt="SMKN 3">
-            <h3>SMKN 3 BTG</h3>
-            <p>1</p>
-        </div>
-            <div class="school-popup" id="SMKN3">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMKN3')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smkn3.png">
-                    <h2>SMKN 3 BTG</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button" disabled>‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/smkn3_zahran.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button" disabled>›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('YABIS2')">
-            <img src="/assets/img/logo-yabis.png" alt="SMA IT YABIS">
-            <h3>SMA IT YABIS</h3>
-            <p>2</p>
-        </div>
-        <div class="school-popup" id="YABIS2">
-            <span class="close-popup"
-                onclick="tutupSekolah('YABIS2')">
-                &times;
-            </span>
-            <div class="popup-header">
-                <img src="/assets/img/logo-yabis.png">
-                <h2>SMA IT YABIS</h2>
-            </div>
-            <div class="popup-gallery">
-                <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/sma_yabis_arifin.png">
-                    <img class="popup-gallery-img" src="/assets/img/sma_yabis_iffah.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-        <div class="school-card" onclick="bukaSekolah('BU')">
-            <img src="/assets/img/logo-bu.png" alt="SMA BU">
-            <h3>SMA BU BTG</h3>
-            <p>2</p>
-        </div>
-            <div class="school-popup" id="BU">
-                <span class="close-popup"
-                    onclick="tutupSekolah('BU')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-bu.png">
-                    <h2>SMA BU BTG</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button">‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/bu_aldi.png">
-                        <img class="popup-gallery-img" src="/assets/img/bu_tiara.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button">›</button>
-                </div>
-            </div>
-        
-        <div class="school-card" onclick="bukaSekolah('DHBS')">
-            <img src="/assets/img/logo-dhbs.png" alt="SMAS IT DHBS">
-            <h3>SMAS IT DHBS</h3>
-            <p>2</p>
-        </div>
-        <div class="school-popup" id="DHBS">
-            <span class="close-popup"
-                onclick="tutupSekolah('DHBS')">
-                &times;
-            </span>
-            <div class="popup-header">
-                <img src="/assets/img/logo-dhbs.png">
-                <h2>SMAS IT DHBS</h2>
-            </div>
-            <div class="popup-gallery">
-                <button class="popup-nav popup-prev" type="button">‹</button>
-                <div class="popup-gallery-viewport">
-                    <img class="popup-gallery-img active" src="/assets/img/dhbs_syamil.png">
-                    <img class="popup-gallery-img" src="/assets/img/dhbs_vio.png">
-                </div>
-                <button class="popup-nav popup-next" type="button">›</button>
-            </div>
-        </div>
-
-        <div class="school-card" onclick="bukaSekolah('YPK2')">
-            <img src="/assets/img/logo-ypk.png" alt="SMA YPK">
-            <h3>SMA YPK</h3>
-            <p>1</p>
-        </div>
-            <div class="school-popup" id="YPK2">
-                <span class="close-popup"
-                    onclick="tutupSekolah('YPK2')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-ypk.png">
-                    <h2>SMA YPK</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button">‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/sma_ypk_rafie.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button">›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('SMKN')">
-            <img src="/assets/img/logo-smkn.png" alt="SMK NUSANTARA">
-            <h3>SMKS NUSMAN</h3>
-            <p>1</p>
-        </div>
-            <div class="school-popup" id="SMKN">
-                <span class="close-popup"
-                    onclick="tutupSekolah('SMKN')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-smkn.png">
-                    <h2>SMKS NUSMAN</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button">‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/smks_andika.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button">›</button>
-                </div>
-            </div>
-
-        <div class="school-card" onclick="bukaSekolah('YKPP')">
-            <img src="/assets/img/logo-ykpp.png" alt="SMKS YKPP">
-            <h3>SMKS YKPP</h3>
-            <p>1</p>
-        </div>
-            <div class="school-popup" id="YKPP">
-                <span class="close-popup"
-                    onclick="tutupSekolah('YKPP')">
-                    &times;
-                </span>
-                <div class="popup-header">
-                    <img src="/assets/img/logo-ykpp.png">
-                    <h2>SMKS YKPP</h2>
-                </div>
-                <div class="popup-gallery">
-                    <button class="popup-nav popup-prev" type="button">‹</button>
-                    <div class="popup-gallery-viewport">
-                        <img class="popup-gallery-img active" src="/assets/img/ykpp_adinda.png">
-                    </div>
-                    <button class="popup-nav popup-next" type="button">›</button>
-                </div>
-            </div>
-    </div>
+    <div class="school-container" id="schoolContainer"></div>
 </section>
 
-<!-- SECTION GALLERY -->
 <section class="gallery">
-    <!-- Judul -->
     <div class="gallery-title">
         <h2>Galeri Kegiatan</h2>
     </div>
 
-    <!--Container-->
-    <div class="gallery-container">
-
-        <!--Item-->
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(6).jpg" 
-                alt="Kegiatan 3"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>MUSYAWARAH BESAR ANGKATAN 11</h3>
-                <p>14 Desember 2025</p>
-            </div>
-        </div>
-        <!--Item-->
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(7).png" 
-                alt="Kegiatan 3"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>LDK</h3>
-                <p>11 Januari 2026</p>
-            </div>
-        </div>
-        <!--Item-->
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(3).png" 
-                alt="Kegiatan 3"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>PELANTIKAN PENGURUS</h3>
-                <p>14 Februari 2026</p>
-            </div>
-        </div>
-
-        <!--Item-->
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(5).png" 
-                alt="Kegiatan 2"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>MALAM KEAKRABAN</h3>
-                <p>15 Februari 2026</p>
-            </div>
-        </div>
-
-        <!--Item-->
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(1).png" 
-                alt="Kegiatan 1"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>RAPAT KERJA</h3>
-                <p>28 Februari 2026</p>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(2).jpeg" 
-                alt="Kegiatan 4"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>BUKBER</h3>
-                <p>14 Maret 2026</p>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(4).png" 
-                alt="Kegiatan 4"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>FOSRAN</h3>
-                <p>14 Maret 2026</p>
-            </div>
-        </div>
-        <div class="gallery-card">
-            <img src="/assets/img/gallery-fosbon(2).png" 
-                alt="Kegiatan 4"
-                onclick="bukaGallery(this)">
-            <div class="gallery-info">
-                <h3>FOSBON CLASS</h3>
-                <p>2 Mei 2026</p>
-            </div>
-        </div>
-    </div>
+    <div class="gallery-container" id="galleryContainer"></div>
 </section>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="tutupGallery(event)">
-
+<div class="lightbox" id="lightbox" onclick="tutupGallery(event)"> <!-- LIGHTBOX -->
     <span class="close">&times;</span>
-
     <img id="lightbox-img">
-
 </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <!-- Overlay -->
+<footer class="footer"> <!-- FOOTER -->
     <div class="footer-overlay"></div>
-    <!-- Isi Footer -->
     <div class="footer-content">
-
-        <!-- Logo -->
         <div class="footer-logo">
             <img src="/assets/img/logo-fosbon.png" alt="logo">
             <h2>FOSBON</h2>
             <p>Forum OSIS Kota Bontang</p>
         </div>
-
-        <!-- Kontak -->
-        <div class="footer-contact">
+        <div class="footer-contact"> <!-- Kontak -->
             <p>📞 0813-5633-4842 (Nazwa)</p>
             <p>✉️ forumosiskotabontang@gmail.com</p>
             <p>📍 Kota Bontang</p>
         </div>
-
-        <div class="footer-social">
-            <!-- Instagram -->
+        <div class="footer-social"> <!-- Media Sosial -->
              <a href="https://instagram.com/fosbontang_" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <!-- YouTube -->
              <a href="https://whatsapp.com/channel/0029Vb7ZDetKbYMSpuc1kv3F" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
@@ -622,4 +153,3 @@
 
 </body>
 </html>
-

@@ -70,8 +70,171 @@ function tutupGallery(event) {
 }
 
 // BUKA POPUP SEKOLAH
-// HTML popup: <div class="school-popup" id="SMPN1">...
+// HTML popup: <div class="school-popup" id="SMPN1">
 // CSS: .school-popup { display: none; } dan .school-popup.active { display: flex; }
+const schoolData = [
+    {
+        id: "SMPN1",
+        logo: "/assets/img/logo-spansa.png",
+        nama: "SMPN 1 BTG",
+        jumlah: 5,
+        anggota: [
+            "/assets/img/spansa_ajeng.png",
+            "/assets/img/spansa_annisa.png",
+            "/assets/img/spansa_dwilya.png",
+            "/assets/img/spansa_nopal.png",
+            "/assets/img/spansa_rasya.png"
+        ]
+    },
+    {
+        id: "SMPN5",
+        logo: "/assets/img/logo-smpn5.png",
+        nama: "SMPN 5 BTG",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/smpn5_asyifa.png"
+        ]
+    },
+    {
+        id: "SMPN8",
+        logo: "/assets/img/logo-smpn8.png",
+        nama: "SMPN 8 BTG",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/smpn8_najma.png"
+        ]
+    },
+    {
+        id: "YABIS_SMP",
+        logo: "/assets/img/logo-yabis.png",
+        nama: "SMP IT YABIS",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/smp_yabis_qiano.png"
+        ]
+    },
+    {
+        id: "YPK",
+        logo: "/assets/img/logo-ypk.png",
+        nama: "SMP YPK",
+        jumlah: 3,
+        anggota: [
+            "/assets/img/smp_ypk_firyal.png",
+            "/assets/img/smp_ypk_nadine.png",
+            "/assets/img/smp_ypk_ravil.png"
+        ]
+    },
+    {
+        id: "SMANSA",
+        logo: "/assets/img/logo-smansa.png",
+        nama: "SMAN 1 BTG",
+        jumlah: 2,
+        anggota: [
+            "/assets/img/smansa_azka.png",
+            "/assets/img/smansa_sabil.png",
+        ]
+    },
+    {
+        id: "SMANDA",
+        logo: "/assets/img/logo-smanda.png",
+        nama: "SMAN 2 BTG",
+        jumlah: 3,
+        anggota: [
+            "/assets/img/smanda_khumaira.png",
+            "/assets/img/smanda_najwa.png",
+            "/assets/img/smanda_vebry.png"
+        ]
+    },
+    {
+        id: "SMANTIG",
+        logo: "/assets/img/logo-smantig.png",
+        nama: "SMAN 3 BTG",
+        jumlah: 3,
+        anggota: [
+            "/assets/img/smantig_mira.png",
+            "/assets/img/smantig_aji.png",
+            "/assets/img/smantig_vina.png"
+        ]
+    },
+    {
+        id: "SMAKEN",
+        logo: "/assets/img/logo-smaken.png",
+        nama: "SMKN 1 BTG",
+        jumlah: 3,
+        anggota: [
+            "/assets/img/smaken_lutfha.png",
+            "/assets/img/smaken_nauval.png",
+            "/assets/img/smaken_rasya.png"
+        ]
+    },
+    {
+        id: "SMKN3",
+        logo: "/assets/img/logo-smkn3.png",
+        nama: "SMKN 3 BTG",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/smkn3_zahran.png",
+        ]
+    },
+    {
+        id: "YABIS_SMA",
+        logo: "/assets/img/logo-yabis.png",
+        nama: "SMA IT YABIS ",
+        jumlah: 2,
+        anggota: [
+            "/assets/img/sma_yabis_arifin.png",
+            "/assets/img/sma_yabis_iffah.png",
+        ]
+    },
+    {
+        id: "BU",
+        logo: "/assets/img/logo-bu.png",
+        nama: "SMA BU BTG",
+        jumlah: 2,
+        anggota: [
+            "/assets/img/bu_aldi.png",
+            "/assets/img/bu_tiara.png",
+        ]
+    },
+    {
+        id: "DHBS",
+        logo: "/assets/img/logo-dhbs.png",
+        nama: "SMA IT DHBS",
+        jumlah: 2,
+        anggota: [
+            "/assets/img/dhbs_syamil.png",
+            "/assets/img/dhbs_vio.png",
+        ]
+    },
+    {
+        id: "YPK_SMA",
+        logo: "/assets/img/logo-ypk.png",
+        nama: "SMA YPK",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/sma_ypk_rafie.png",
+        ]
+    },
+    {
+        id: "SMKS",
+        logo: "/assets/img/logo-smkn.png",
+        nama: "SMKS NUSMAN",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/smks_andika.png"
+        ]
+    },
+    {
+        id: "YKPP",
+        logo: "/assets/img/logo-ykpp.png",
+        nama: "SMKS YKPP",
+        jumlah: 1,
+        anggota: [
+            "/assets/img/ykpp_adinda.png",
+        ]
+    },
+];
+
 function bukaSekolah(id) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -105,27 +268,130 @@ function tutupSekolah(id) {
     el.classList.remove("active");
 }
 
-(function initSchoolCarousel() {
+function renderSchools() {
+    const container = document.getElementById("schoolContainer");
+    if (!container) return;
 
+    container.innerHTML = "";
+
+    schoolData.forEach((school) => {
+        const anggotaHTML = school.anggota.map((foto, index) => {
+            return `
+                <img 
+                    class="popup-gallery-img ${index === 0 ? "active" : ""}" 
+                    src="${foto}" 
+                    alt="${school.nama} ${index + 1}">
+            `;
+        }).join("");
+
+        const isSingle = school.anggota.length <= 1;
+
+        container.innerHTML += `
+            <div class="school-card" onclick="bukaSekolah('${school.id}')">
+                <img src="${school.logo}" alt="${school.nama}">
+                <h3>${school.nama}</h3>
+                <p>${school.jumlah}</p>
+            </div>
+            <div class="school-popup" id="${school.id}">
+                <span class="close-popup" onclick="tutupSekolah('${school.id}')">
+                    &times;
+                </span>
+                <div class="popup-header">
+                    <img src="${school.logo}" alt="${school.nama}">
+                    <h2>${school.nama}</h2>
+                </div>
+                <div class="popup-gallery">
+                    <button class="popup-nav popup-prev" type="button" ${isSingle ? "disabled" : ""}>‹</button>
+                    <div class="popup-gallery-viewport">
+                        ${anggotaHTML}
+                    </div>
+                    <button class="popup-nav popup-next" type="button" ${isSingle ? "disabled" : ""}>›</button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+const galleryData = [
+        {
+            judul: "MUSYAWARAH BESAR ANGKATAN 11",
+            tanggal: "14 Desember 2025",
+            gambar: "/assets/img/gallery-fosbon(6).jpg"
+        },
+        {
+            judul: "LDK",
+            tanggal: "11 Januari 2026",
+            gambar: "/assets/img/gallery-fosbon(7).png"
+        },
+        {
+            judul: "PELANTIKAN PENGURUS",
+            tanggal: "14 Februari 2026",
+            gambar: "/assets/img/gallery-fosbon(3).png"
+        },
+        {
+            judul: "MALAM KEAKRABAN",
+            tanggal: "15 Februari 2026",
+            gambar: "/assets/img/gallery-fosbon(5).png"
+        },
+        {
+            judul: "RAPAT KERJA",
+            tanggal: "28 Februari 2026",
+            gambar: "/assets/img/gallery-fosbon(1).png"
+        },
+        {
+            judul: "BUKBER",
+            tanggal: "14 Maret 2026",
+            gambar: "/assets/img/gallery-fosbon(2).jpeg"
+        },
+        {
+            judul: "FOSRAN",
+            tanggal: "14 Maret 2026",
+            gambar: "/assets/img/gallery-fosbon(4).png"
+        },
+        {
+            judul: "FOSBON CLASS",
+            tanggal: "2 Mei 2026",
+            gambar: "/assets/img/gallery-fosbon(2).png"
+        }
+    ];
+
+function renderGallery() {
+    const container = document.getElementById("galleryContainer");
+    if (!container) return;
+    container.innerHTML = "";
+    galleryData.forEach(item => {
+        container.innerHTML += `
+            <div class="gallery-card">
+                <img
+                    src="${item.gambar}"
+                    alt="${item.judul}"
+                    onclick="bukaGallery(this)"
+                >
+                <div class="gallery-info">
+                    <h3>${item.judul}</h3>
+                    <p>${item.tanggal}</p>
+                </div>
+            </div>
+        `;
+    });
+}
+renderGallery();
+
+renderSchools();
+(function initSchoolCarousel() {
     function isMobile() {
         return window.matchMedia("(max-width: 768px)").matches;
     }
-
     function setupPopupGallery(popupGallery) {
         const imgs = popupGallery.querySelectorAll(".popup-gallery-img");
         const prevBtn = popupGallery.querySelector(".popup-prev");
         const nextBtn = popupGallery.querySelector(".popup-next");
-
         if (!imgs.length) return;
-
         const onlyOne = imgs.length <= 1;
-
         if (prevBtn) prevBtn.disabled = onlyOne;
         if (nextBtn) nextBtn.disabled = onlyOne;
-
         if (isMobile()) {
             let hasActive = Array.from(imgs).some(img => img.classList.contains("active"));
-
             if (!hasActive) {
                 imgs[0].classList.add("active");
             }
@@ -133,24 +399,16 @@ function tutupSekolah(id) {
             imgs.forEach(img => img.classList.remove("active"));
         }
     }
-
     document.querySelectorAll(".popup-gallery").forEach(setupPopupGallery);
-
     document.addEventListener("click", function(e) {
         const btn = e.target.closest(".popup-prev, .popup-next");
         if (!btn || btn.disabled || !isMobile()) return;
-
         const popupGallery = btn.closest(".popup-gallery");
         const imgs = popupGallery.querySelectorAll(".popup-gallery-img");
-
         if (imgs.length <= 1) return;
-
         let currentIndex = Array.from(imgs).findIndex(img => img.classList.contains("active"));
-
         if (currentIndex === -1) currentIndex = 0;
-
         imgs[currentIndex].classList.remove("active");
-
         if (btn.classList.contains("popup-next")) {
             currentIndex++;
             if (currentIndex >= imgs.length) currentIndex = 0;
@@ -158,13 +416,10 @@ function tutupSekolah(id) {
             currentIndex--;
             if (currentIndex < 0) currentIndex = imgs.length - 1;
         }
-
         imgs[currentIndex].classList.add("active");
     });
-
     window.addEventListener("resize", function() {
         document.querySelectorAll(".popup-gallery").forEach(setupPopupGallery);
     });
-
 })();
 
