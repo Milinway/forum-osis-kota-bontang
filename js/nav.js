@@ -1,46 +1,75 @@
-// Navbar burger + dropdown (mobile)
-// Dipakai di semua halaman yang punya struktur:
-// .nav-toggle, .nav-links, .dropdown, .dropdown-toggle, .dropdown-content
+// Navbar burger + dropdown profil
+// Dipakai di semua halaman yang punya:
+// .nav-toggle, .nav-links, .dropdown, .dropdown-toggle
 
 (function initNav() {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (!navToggle || !navLinks) return;
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
 
-  // Burger menu
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
+    if (!navToggle || !navLinks) return;
 
-  // Dropdown profil (mobile)
-  const dropdown = document.querySelector('.dropdown');
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdownContent = document.querySelector('.dropdown-content');
-  if (!dropdown || !dropdownToggle || !dropdownContent) return;
+    // Buka/tutup burger menu
+    navToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
 
-  dropdownToggle.addEventListener('click', (e) => {
-    // Jangan trigger toggle navbar saat klik dropdown
-    e.stopPropagation();
+        const isOpen = navLinks.classList.toggle("open");
 
-    // Jika menu sedang tertutup, buka dulu agar dropdown muncul
-    if (!navLinks.classList.contains('open')) {
-      navLinks.classList.add('open');
-      navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+
+        // kalau navbar ditutup, dropdown juga ikut ditutup
+        if (!isOpen && dropdown && dropdownToggle) {
+            dropdown.classList.remove("open");
+            dropdownToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // Dropdown profil
+    if (dropdown && dropdownToggle) {
+        dropdownToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+            // Mobile: profil jadi parent-child
+            if (isMobile) {
+                const isOpen = dropdown.classList.toggle("open");
+                dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+            }
+
+            // Desktop: biarin CSS hover yang jalan
+        });
     }
 
-    const opened = dropdown.classList.toggle('open');
-    dropdownToggle.setAttribute('aria-expanded', String(opened));
-  });
+    // Klik di luar navbar = tutup menu mobile
+    document.addEventListener("click", function (e) {
+        const clickedInsideNavbar = e.target.closest(".navbar");
 
-  // Tutup dropdown saat klik di luar
-  document.addEventListener('click', (e) => {
-    const clickedInsideDropdown = dropdown.contains(e.target);
-    if (!clickedInsideDropdown) {
-      dropdown.classList.remove('open');
-      dropdownToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
+        if (!clickedInsideNavbar) {
+            navLinks.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+
+            if (dropdown && dropdownToggle) {
+                dropdown.classList.remove("open");
+                dropdownToggle.setAttribute("aria-expanded", "false");
+            }
+        }
+    });
+
+    // Kalau layar dibesarkan lagi, reset mode mobile
+    window.addEventListener("resize", function () {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+        if (!isMobile) {
+            navLinks.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+
+            if (dropdown && dropdownToggle) {
+                dropdown.classList.remove("open");
+                dropdownToggle.setAttribute("aria-expanded", "false");
+            }
+        }
+    });
 })();
-
-

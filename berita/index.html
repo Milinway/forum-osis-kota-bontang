@@ -8,6 +8,7 @@
 
     <link rel="icon" type="image/png" href="/assets/img/logo-fosbon.png">
     <link rel="stylesheet" href="/css/berita.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -44,73 +45,17 @@
         </nav>
     </header>
 
-    <!-- SECTION BERITA -->
-<section class="berita-section">
-
+    <section class="berita-section">
     <div class="berita-title">
         <h1>Berita FOSBON</h1>
         <p>Informasi dan kabar terbaru Forum OSIS Kota Bontang</p>
     </div>
-
-    <div class="berita-container">
-
-        <!-- CARD BERITA -->
-        <article class="berita-card">
-            <img src="/assets/img/gallery-fosbon(7).png" alt="Berita 3">
-
-            <div class="berita-info">
-                <p class="berita-date">11 Januari 2026</p>
-
-                <h2>LDK FORUM OSIS BONTANG: Membangun Jiwa Kepemimpinan dan Pengembangan Diri Pengurus OSIS</h2>
-
-                <p class="berita-excerpt">
-                    Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai...
-                </p>
-
-                <a href="/berita/detail/?id=ldk" class="berita-link">
-                    Baca Selengkapnya
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </article>
-
-        <!-- CARD BERITA -->
-        <article class="berita-card">
-            <img src="/assets/img/gallery-fosbon(4).png" alt="Berita 1">
-
-            <div class="berita-info">
-                <p class="berita-date">14 Maret 2026</p>
-                <h2>FOSRAN 2026 Berjalan Lancar, Tebar Kepedulian di Bulan Ramadhan</h2>
-                <p class="berita-excerpt">
-                    Kegiatan FOSRAN (Forum OSIS Sahabat Ramadhan) telah berhasil dilaksanakan dengan lancar...</p>
-                    <a href="/berita/detail/?id=fosran2026" class="berita-link">
-                    Baca Selengkapnya
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </article>
-
-        <!-- CARD BERITA -->
-        <article class="berita-card">
-            <img src="/assets/img/gallery-fosbon(2).png" alt="Berita 2">
-
-            <div class="berita-info">
-                <p class="berita-date">06 Mei 2026</p>
-
-                <h2>FOSBON CLASS 2026: “UNLEASHA” Jadi Wadah Pelajar Mengembangkan Public Speaking dan Rasa Percaya Diri</h2>
-
-                <p class="berita-excerpt">
-                    Forum OSIS Bontang (FOSBON) kembali menghadirkan kegiatan edukatif dan inspiratif melalui program...
-                </p>
-
-                <a href="/berita/detail/?id=fosbon-class" class="berita-link">
-                    Baca Selengkapnya
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </article>
-    </div>
-    
+    <div class="berita-container" id="beritaContainer"></div>
 </section>
 
 <script src="/js/nav.js"></script>
+<script src="/js/berita-data.js"></script>
+<script src="/js/berita.js"></script>
+
+</body>
+</html>

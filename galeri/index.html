@@ -6,7 +6,8 @@
     
     <title>Galeri</title>
 
-<link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="icon" type="image/png" href="/assets/img/logo-fosbon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -49,152 +50,20 @@
      SECTION GALLERY
 ========================= -->
 <section class="gallery-section">
-
     <!-- Judul -->
     <div class="gallery-title">
         <h1>Galeri Kegiatan</h1>
         <p>Dokumentasi kegiatan Forum OSIS Kota Bontang</p>
     </div>
-
-    <!-- CONTAINER -->
-    <div class="gallery-container">
-
-        <!-- CARD -->
-    <div class="gallery-card"
-        onclick="bukaGallerySet('musyawarah')">
-        <img src="/assets/img/gallery-fosbon(6).jpg">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>1 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>MUSYAWARAH BESAR ANGKATAN 11</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('ldk')">
-        <img src="/assets/img/gallery-fosbon(7).png">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>8 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>LDK</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('pelantikan')">
-        <img src="/assets/img/gallery-fosbon(3).png">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>7 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>PELANTIKAN PENGURUS</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('makrab')">
-        <img src="/assets/img/gallery-fosbon(5).png">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>3 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>MALAM KEAKRABAN</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('raker')">
-        <img src="/assets/img/gallery-fosbon(1).png">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>1 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>RAPAT KERJA</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('bukber')">
-        <img src="/assets/img/gallery-fosbon(3).jpeg">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>1 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>BUKBER</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('fosran')">
-        <img src="/assets/img/gallery-fosbon(4).png">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>7 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>FOSRAN</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
-    <!-- CARD -->
-        <div class="gallery-card"
-        onclick="bukaGallerySet('fosclass')">
-        <img src="/assets/img/gallery-fosbon(2).png">
-        <div class="gallery-badge">
-            <i class="fa-regular fa-image"></i>4 Foto
-        </div>
-        <div class="gallery-info">
-            <h3>FOSBON CLASS</h3>
-        <div class="gallery-link">
-            LIHAT FOTO ACARA
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-</div>
-
+    <div class="gallery-container" id="galleryContainer"></div>
 </section>
 
-    <div class="multi-gallery-popup" id="multiGallery">
-        <span class="multi-close"
-        onclick="tutupMultiGallery()">
-        &times;
+<div class="multi-gallery-popup" id="multiGallery">
+    <span class="multi-close"
+    onclick="tutupMultiGallery()">
+    &times;
     </span>
-    <div class="multi-gallery-content"
-        id="multiGalleryContent">
+    <div class="multi-gallery-content" id="multiGalleryContent">
     </div>
 </div>
 
@@ -203,27 +72,19 @@
 ========================= -->
 <div class="gallery-popup" id="galleryPopup">
     <div class="popup-content">
-
-        <!-- Tombol close -->
-        <span class="close-popup"
+        <span class="close-popup" 
             onclick="tutupGallery()">
             &times;
-        </span>
-
-        <!-- Kiri -->
-        <div class="popup-image">
+        </span> <!-- Tombol close -->
+        <div class="popup-image"> <!-- Kiri -->
             <img id="popup-img">
         </div>
-
-        <!-- Kanan -->
-        <div class="popup-text">
+        <div class="popup-text"> <!-- Kanan -->
             <h2 id="popup-title"></h2>
             <p class="popup-date" id="popup-date"></p>
             <p class="popup-desc" id="popup-desc"></p>
         </div>
-
     </div>
-
 </div>
 
 

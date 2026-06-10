@@ -1,23 +1,13 @@
-# TODO - Perbaikan UI (Navbar responsif + Gallery)
+# TODO - Rapikan CSS Navbar/Dropdown (FOSBON)
 
-## 1) Navbar responsif (burger + dropdown bersarang)
-- Ubah `index.html` dan `galeri.html`:
-  - ganti menu Home/Profil/Galeri/Kontak jadi wrapper `.nav-links`.
-  - tambahkan tombol burger untuk toggle dropdown.
-  - Pastikan Profil tetap bisa buka submenu (Visi & Misi, Struktur Organisasi) dan masing-masing masih bisa diklik.
-- Update CSS `css/home.css` untuk responsif navbar:
-  - definisikan `.nav-toggle`, `.nav-links`, dropdown behavior pada layar kecil.
+- [x] Update `css/home.css`: unifikasi styling navbar/dropdown profil, hapus duplikasi & bentrok, perbaiki posisi/sejajar desktop.
+- [x] `css/home.css`: pastikan dropdown profil desktop bisa diklik (tanpa mengubah HTML), pakai `:focus-within` + hover aman.
+- [x] `css/home.css`: tambah animasi fade in/out halus untuk dropdown desktop.
+- [x] `css/home.css`: rapikan mode mobile: tombol/parent Profil sejajar; dropdown profil tampil seperti parent-child (border-left kecil), bukan box dropdown baru.
+- [x] Samakan konsistensi navbar/dropdown di `css/gallery.css` dan `css/profil.css` bila ada selector yang duplikat/bentrok.
+- [x] Verifikasi tidak ada dua blok `@media (max-width: 768px)` yang mengubah navbar/dropdown secara bertentangan di `home.css`.
+- [x] Uji manual: desktop hover & klik Profil, mobile burger buka/tutup, mobile dropdown Profil tampil sesuai parent-child.
 
-## 2) Layout responsif biar rapi saat width mengecil
-- Tambahkan breakpoint di `css/home.css` dan `css/gallery.css`:
-  - atur flex/grid agar elemen tidak “nempel posisi laptop”.
 
-## 3) Redesign gallery (konsisten + maksimal 6 gambar saat popup)
-- Ubah `galeri.html`:
-  - setiap card cukup tampil kotak + thumbnail(s) kecil (bukan deskripsi panjang).
-  - saat card diklik, buka popup yang menampilkan maksimal 6 gambar dokumentasi.
-- Ubah `css/gallery.css`:
-  - pastikan card pakai ukuran fixed + gambar sebagai thumbnail konsisten (object-fit cover/contain dengan tinggi tetap).
-- Ubah `js/gallery.js`:
-  - implementasi logic popup multi-image (maks 6) + tanpa mengharuskan deskripsi panjang.
+
 
