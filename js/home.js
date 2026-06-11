@@ -1,54 +1,109 @@
-let slides = document.querySelectorAll('.slide');
+const sliderData = [
+    "/assets/img/bg-home(1).png",
+    "/assets/img/bg-home(2).png",
+    "/assets/img/bg-home(3).png",
+    "/assets/img/bg-home(4).png",
+    "/assets/img/bg-home(5).png",
+    "/assets/img/bg-home(6).png"
+];
 
-function gantiSlide(index) {
-    // hapus active dari semua gambar
-    slides.forEach(slide => {
-        slide.classList.remove('active');
+let currentSlide = 0;
+let slideTimer;
+
+function renderSlider() {
+    const slidesContainer = document.getElementById("slidesContainer");
+    const dotsContainer = document.getElementById("sliderDots");
+
+    if (!slidesContainer || !dotsContainer) return;
+
+    slidesContainer.innerHTML = "";
+    dotsContainer.innerHTML = "";
+
+    sliderData.forEach((src, index) => {
+        slidesContainer.innerHTML += `
+            <img src="${src}" class="slide ${index === 0 ? "active" : ""}" alt="Slide ${index + 1}">
+        `;
+
+        dotsContainer.innerHTML += `
+            <span class="dot ${index === 0 ? "active" : ""}" data-index="${index}"></span>
+        `;
     });
 
-    // tambahkan active ke gambar yang dipilih
-    if (slides[index]) slides[index].classList.add('active');
-
-    // sync dot otomatis (kalau ada)
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
+    document.querySelectorAll(".dot").forEach(dot => {
+        dot.addEventListener("click", () => {
+            gantiSlide(Number(dot.dataset.index));
+            startAutoSlide();
+        });
     });
 }
 
-// NAVBAR MOBILE & DROPDOWN MOBILE
-// (dipindahkan ke js/nav.js agar konsisten di semua halaman)
+function gantiSlide(index) {
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
 
-// DOT otomatis mengikuti jumlah slide
-(function initDots() {
-    const container = document.querySelector('.dots');
-    if (!container) return;
+    if (!slides.length) return;
 
-    // hapus dot lama (biar ngikut kalau slide nambah)
-    container.innerHTML = '';
+    currentSlide = index;
 
-    const frag = document.createDocumentFragment();
-    for (let i = 0; i < slides.length; i++) {
-        const dot = document.createElement('span');
-        dot.className = 'dot' + (i === 0 ? ' active' : '');
-        dot.onclick = () => gantiSlide(i);
-        frag.appendChild(dot);
-    }
-    container.appendChild(frag);
-})();
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+    });
 
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+    });
+}
 
-let current = 0;
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % sliderData.length;
+    gantiSlide(currentSlide);
+}
 
-setInterval(() => {
-    current++;
+function prevSlide() {
+    currentSlide = currentSlide - 1;
 
-    if (current >= slides.length) {
-        current = 0;
+    if (currentSlide < 0) {
+        currentSlide = sliderData.length - 1;
     }
 
-    gantiSlide(current);
-}, 4000);
+    gantiSlide(currentSlide);
+}
+
+function startAutoSlide() {
+    clearInterval(slideTimer);
+    slideTimer = setInterval(nextSlide, 4000);
+}
+
+function initSliderSwipe() {
+    const slider = document.getElementById("heroSlider");
+    if (!slider) return;
+
+    let startX = 0;
+
+    slider.addEventListener("touchstart", function(e) {
+        startX = e.touches[0].clientX;
+        clearInterval(slideTimer);
+    }, { passive: true });
+
+    slider.addEventListener("touchend", function(e) {
+        const endX = e.changedTouches[0].clientX;
+        const distance = startX - endX;
+
+        if (Math.abs(distance) > 50) {
+            if (distance > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+
+        startAutoSlide();
+    }, { passive: true });
+}
+
+renderSlider();
+initSliderSwipe();
+startAutoSlide();
 
 // LIGHTBOX GALLERY
 function bukaGallery(element) {

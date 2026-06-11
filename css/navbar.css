@@ -57,6 +57,26 @@ nav a {
     font-family: inherit;
 }
 
+/* Menu utama: underline hanya Home, Berita, Galeri */
+.nav-links > a.nav-item:hover {
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Child dropdown: underline satu-satu */
+.dropdown-content a:hover {
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Profil parent jangan underline */
+.dropdown-toggle:hover {
+    text-decoration: none;
+    background: transparent;
+}
+
 .nav-item {
     margin-left: 0 !important;
     padding: 8px 10px;
@@ -207,7 +227,9 @@ nav a {
 }
 
 .dropdown-content a:hover {
-    background: #ffd54f;
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 /* Animasi panah */
@@ -317,24 +339,9 @@ nav a {
         position: relative;
         margin-top: 6px;
         margin-left: 18px;
-        padding: 9px 12px 9px 28px;
+        padding: 9px 12px;
         background: #f0f0f0;
         border-radius: 8px;
         white-space: normal;
-    }
-    .dropdown-content a::before {
-        content: "";
-
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-
-        width: 7px;
-        height: 7px;
-
-        border: 2px solid #8b6b4a;
-        border-radius: 50%;
-        background: transparent;
     }
 }
