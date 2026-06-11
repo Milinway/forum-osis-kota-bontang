@@ -423,3 +423,90 @@ renderSchools();
     });
 })();
 
+function initSchoolToggle() {
+    const container = document.getElementById("schoolContainer");
+    const toggleBtn = document.getElementById("schoolToggle");
+
+    if (!container || !toggleBtn) return;
+
+    let isExpanded = false;
+
+    function getPreviewConfig() {
+        const width = window.innerWidth;
+
+        if (width > 768) {
+            return {
+                mobile: false,
+                visible: Infinity,
+                preview: Infinity,
+                maxHeight: "none"
+            };
+        }
+
+        // HP agak lebar / tablet kecil
+        if (width >= 600) {
+            return {
+                mobile: true,
+                visible: 4,
+                preview: 8,
+                maxHeight: "430px"
+            };
+        }
+
+        // HP kecil
+        return {
+            mobile: true,
+            visible: 3,
+            preview: 6,
+            maxHeight: "640px"
+        };
+    }
+
+    function applyPreview() {
+        const cards = container.querySelectorAll(".school-card");
+        const config = getPreviewConfig();
+
+        cards.forEach((card, index) => {
+            card.classList.remove("is-blur");
+            card.style.display = "";
+            card.style.pointerEvents = "";
+        });
+
+        if (!config.mobile) {
+            container.classList.remove("school-collapsed");
+            toggleBtn.style.display = "none";
+            return;
+        }
+
+        toggleBtn.style.display = "block";
+
+        if (isExpanded) {
+            container.classList.remove("school-collapsed");
+            toggleBtn.textContent = "Tutup";
+            return;
+        }
+
+        container.classList.add("school-collapsed");
+        container.style.setProperty("--school-preview-height", config.maxHeight);
+        toggleBtn.textContent = "Lihat Selengkapnya";
+
+        cards.forEach((card, index) => {
+            if (index >= config.preview) {
+                card.style.display = "none";
+            } else if (index >= config.visible) {
+                card.classList.add("is-blur");
+            }
+        });
+    }
+
+    toggleBtn.addEventListener("click", function () {
+        isExpanded = !isExpanded;
+        applyPreview();
+    });
+
+    window.addEventListener("resize", applyPreview);
+
+    applyPreview();
+}
+
+initSchoolToggle();

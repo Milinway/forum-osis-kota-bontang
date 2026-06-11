@@ -294,6 +294,61 @@ body {
     gap: 5px;
 }
 
+@media (max-width: 768px) {
+    .school-container {
+        position: relative;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .school-container.school-collapsed {
+        max-height: var(--school-preview-height, 650px);
+    }
+
+    .school-container:not(.school-collapsed) {
+        max-height: 5000px;
+    }
+
+    .school-container.school-collapsed::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 180px;
+        background: linear-gradient(
+            to bottom,
+            rgba(152,117,84,0),
+            rgba(152,117,84,0.85) 50%,
+            rgba(152,117,84,1) 100%
+        );
+        pointer-events: none;
+    }
+
+    .school-card.is-blur {
+        filter: blur(1.8px);
+        opacity: 0.65;
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .school-card {
+        filter: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    .school-container {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .school-toggle {
+        display: none !important;
+    }
+}
+
 /* CARD SEKOLAH */
 .school-card {
     width: 120px;
@@ -307,8 +362,7 @@ body {
 
 /* Hover */
 .school-card:hover {
-    transform: translateY(-10px);
-    background-color: #ffd54f; /* warna kuning */
+    background-color: #4c3826;
 }
 
 /* Logo sekolah */
@@ -335,6 +389,25 @@ body {
     font-weight: bold;
     font-size: 35px;
     margin: 0;
+}
+
+.school-toggle {
+    display: none;
+    margin: 20px auto 5px;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #6e5338;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    margin-top: -50px;
+}
+
+.school-toggle:hover {
+    background: #4c3826;
 }
 
 /* =========================
