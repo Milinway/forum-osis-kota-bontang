@@ -10,20 +10,14 @@ body {
 
 .multi-gallery-popup {
     display: none;
-
     position: fixed;
     z-index: 9999;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background: rgba(0,0,0,0.92);
-
     overflow-y: auto;
-
     padding: 40px;
     box-sizing: border-box;
 }
@@ -34,22 +28,16 @@ body {
 
 .multi-gallery-content {
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
     gap: 18px;
 }
 
 .multi-gallery-content img {
     width: 100%;
     height: 260px;
-
     object-fit: cover;
-
     border-radius: 18px;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -61,16 +49,11 @@ body {
 /* tombol close */
 .multi-close {
     position: fixed;
-
     top: 20px;
     right: 30px;
-
     color: white;
-
     font-size: 55px;
-
     cursor: pointer;
-
     z-index: 10002;
 }
 
@@ -104,9 +87,7 @@ body {
 
 .gallery-container {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 20px;
 }
 
@@ -117,15 +98,10 @@ body {
 .gallery-card {
     background: white;
     border-radius: 28px;
-
     overflow: hidden;
-
     box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-
     transition: 0.3s;
-
     cursor: pointer;
-
     position: relative;
 }
 
@@ -137,9 +113,7 @@ body {
 .gallery-card img {
     width: 100%;
     height: 250px;
-
     object-fit: cover;
-
     transition: 0.4s;
 }
 
@@ -150,20 +124,14 @@ body {
 /* BADGE JUMLAH FOTO */
 .gallery-badge {
     position: absolute;
-
     top: 18px;
     right: 18px;
-
     background: #60472e;;
     color: white;
-
     padding: 10px 18px;
-
     border-radius: 999px;
-
     font-size: 14px;
     font-weight: 600;
-
     display: flex;
     align-items: center;
     gap: 8px;
@@ -177,26 +145,20 @@ body {
 
 .gallery-info h3 {
     margin: 0;
-
     font-size: 24px;
     line-height: 1.3;
-
     color: #7a5a3a;;
 }
 
 /* TOMBOL */
 .gallery-link {
     margin-top: 30px;
-
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
     color: #000000;;
     font-weight: 700;
-
     text-decoration: none;
-
     font-size: 18px;
 }
 
@@ -214,19 +176,13 @@ body {
 
 .gallery-popup {
     display: none;
-
     position: fixed;
-
     z-index: 10001;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background: rgba(0,0,0,0.8);
-
     justify-content: center;
     align-items: center;
 }
@@ -241,17 +197,11 @@ body {
     width: 80%;
     height: 90%;
     max-width: 1000px;
-
     background: white;
-
     border-radius: 25px;
-
     display: flex;
-
     overflow: hidden;
-
     position: relative;
-
     animation: popup 0.3s;
 }
 
@@ -271,14 +221,10 @@ body {
 /* Tombol close */
 .close-popup {
     position: absolute;
-
     top: 15px;
     right: 25px;
-
     font-size: 40px;
-
     cursor: pointer;
-
     color: #555;
     z-index: 10002;
 }
@@ -297,7 +243,6 @@ body {
     width: 100%;
     height: auto;
     max-height: 520px;
-
     object-fit: contain; /* biar gak kepotong */
     border-radius: 18px;
     background: #f5f5f5;
@@ -307,9 +252,7 @@ body {
 /* Kanan */
 .popup-text {
     width: 55%;
-
     padding: 40px;
-
     text-align: left;
 }
 
@@ -326,14 +269,10 @@ body {
 .popup-desc {
     line-height: 1.8;
     color: #444;
-
-    /* Biar deskripsi nggak makan kotak terlalu banyak */
     max-height: 230px;
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 8px;
-
-    /* JANGAN pake text-overflow agar tidak terlihat "kepotong" */
     white-space: normal;
     word-break: break-word;
 }
@@ -346,9 +285,7 @@ body {
     width: auto;
     max-width: 90vw;
     height: auto;
-
     padding: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -364,7 +301,6 @@ body {
     height: auto;
     max-width: 85vw;
     max-height: 85vh;
-
     object-fit: contain;
     border-radius: 18px;
 }

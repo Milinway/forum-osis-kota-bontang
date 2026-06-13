@@ -13,57 +13,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
+    <header class="navbar"> <!-- NAVBAR -->
         <div class="logo">
             <img src="/assets/img/logo-fosbon.png" alt="logo">
             <h1>FORUM OSIS KOTA BONTANG</h1>
         </div>
-
         <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
             <i class="fa-solid fa-bars"></i>
         </button>
-
         <nav class="nav-links">
             <a href="/" class="nav-item">Home</a>
             <a href="/berita/" class="nav-item">Berita</a>
-
-            <!-- Parent DROPDOWN PROFIL -->
-            <div class="dropdown nav-item">
+            <div class="dropdown nav-item"> <!-- Parent DROPDOWN PROFIL -->
                 <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
                     Profil
                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </button>
-
                 <div class="dropdown-content">
                     <a href="/visi-misi/">Visi & Misi</a>
                     <a href="/struktur/">Struktur Organisasi</a>
                 </div>
             </div>
-
             <a href="/galeri/" class="nav-item">Galeri</a>
         </nav>
     </header>
 
 <section class="detail-section">
-
     <a href="/berita/" class="back-link">
         <i class="fa-solid fa-arrow-left"></i>
         Kembali ke Berita
     </a>
-
     <article class="detail-card">
         <h1 id="detail-title"></h1>
-
         <p class="detail-date" id="detail-date"></p>
-
         <hr>
-
         <img class="detail-img" id="detail-img" alt="Gambar Berita">
-
         <div id="detail-content"></div>
     </article>
-
 </section>
 
 <script src="/js/nav.js"></script>
