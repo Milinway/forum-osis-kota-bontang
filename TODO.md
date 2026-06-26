@@ -1,13 +1,12 @@
-# TODO - Rapikan CSS Navbar/Dropdown (FOSBON)
+# TODO
 
-- [x] Update `css/home.css`: unifikasi styling navbar/dropdown profil, hapus duplikasi & bentrok, perbaiki posisi/sejajar desktop.
-- [x] `css/home.css`: pastikan dropdown profil desktop bisa diklik (tanpa mengubah HTML), pakai `:focus-within` + hover aman.
-- [x] `css/home.css`: tambah animasi fade in/out halus untuk dropdown desktop.
-- [x] `css/home.css`: rapikan mode mobile: tombol/parent Profil sejajar; dropdown profil tampil seperti parent-child (border-left kecil), bukan box dropdown baru.
-- [x] Samakan konsistensi navbar/dropdown di `css/gallery.css` dan `css/profil.css` bila ada selector yang duplikat/bentrok.
-- [x] Verifikasi tidak ada dua blok `@media (max-width: 768px)` yang mengubah navbar/dropdown secara bertentangan di `home.css`.
-- [x] Uji manual: desktop hover & klik Profil, mobile burger buka/tutup, mobile dropdown Profil tampil sesuai parent-child.
+- [x] Update `css/berita-update.css`: Ganti blok `.update-modal-media` dan turunannya dengan kode yang diberikan
 
+- [x] `css/berita-update.css`: Tambah blok `.update-modal-content` (termasuk `.update-modal-tag`, `.update-modal-title`, `.update-modal-excerpt`)
 
+- [x] `css/berita-update.css`: Update media query mobile (max-width: 768px dan max-width: 480px) sesuai kode yang diberikan
 
+- [x] `css/berita-update.css`: Pastikan `min-width` dan `min-height` ada di `.update-modal-media .img-slider` (desktop & mobile)
+
+- [ ] Quick check: pastikan tidak ada konflik styling slider reusable `.img-slider` terhadap selector modal (override yang cukup spesifik)
 

@@ -52,4 +52,15 @@ const beritaData = [
             <p>Kegiatan ini juga menjadi momentum bagi para pengurus untuk mempererat solidaritas, meningkatkan semangat kerja sama, dan memperkuat komitmen dalam menjalankan amanah organisasi demi terciptanya Forum OSIS Bontang yang aktif, kreatif, dan progresif.<p>
         `
     },
+    {
+        id: "prograsa",
+        judul: "PROGRASA (Progres Rasa): ",
+        tanggal: "11 Januari 2026",
+        gambar: "/assets/img/gallery-fosbon(7).png",
+        excerpt: "Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai...",
+        isi: `
+            <p>Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai upaya membentuk karakter, meningkatkan kualitas kepemimpinan, serta mengembangkan kemampuan pengurus dalam berorganisasi. Kegiatan ini dilaksanakan di BPU Bontang Selatan dan diikuti oleh sebanyak 34 pengurus Forum OSIS Bontang.</p>
+            
+        `
+    },
 ];

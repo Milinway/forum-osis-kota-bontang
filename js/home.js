@@ -125,8 +125,6 @@ function tutupGallery(event) {
 }
 
 // BUKA POPUP SEKOLAH
-// HTML popup: <div class="school-popup" id="SMPN1">
-// CSS: .school-popup { display: none; } dan .school-popup.active { display: flex; }
 const schoolData = [
     {
         id: "SMPN1",

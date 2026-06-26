@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="/assets/img/logo-fosbon.png">
     <link rel="stylesheet" href="/css/berita.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/berita-update.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -44,16 +45,38 @@
             <a href="/galeri/" class="nav-item">Galeri</a>
         </nav>
     </header>
+    
+<!-- UPDATE TERBARU: berita featured dari beritaData, BUKAN medsos -->
+    <section class="berita-update">
+        <div class="update-title">
+            <h2>Update Terbaru</h2>
+            <p>Informasi dan kabar terbaru melalui Media Sosial</p>
+        </div>
+ 
+        <div class="update-slider">
+            <button class="update-nav prev" id="featuredPrev" aria-label="Sebelumnya">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div class="update-track" id="featuredContainer"></div>
+ 
+            <button class="update-nav next" id="featuredNext" aria-label="Selanjutnya">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
 
     <section class="berita-section">
     <div class="berita-title">
         <h1>Berita FOSBON</h1>
-        <p>Informasi dan kabar terbaru Forum OSIS Kota Bontang</p>
+        <p>Informasi kegiatan Forum OSIS Kota Bontang</p>
     </div>
     <div class="berita-container" id="beritaContainer"></div>
 </section>
 
 <script src="/js/nav.js"></script>
+<script src="/js/update-data.js"></script>
+<script src="/js/update.js"></script>
 <script src="/js/berita-data.js"></script>
 <script src="/js/berita.js"></script>
 

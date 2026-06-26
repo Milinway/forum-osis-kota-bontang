@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>FOSBON</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/berita-update.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="icon" type="image/png" href="assets/img/logo-fosbon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -48,6 +49,26 @@
         <p>Integrasi organisasi dari seluruh pengurus OSIS SMP/MTS, SMA/K/MA Se-kota Bontang</p>
     </div>
 </section>
+
+<!-- UPDATE TERBARU: berita featured dari beritaData, BUKAN medsos -->
+    <section class="berita-update">
+        <div class="update-title">
+            <h2>Update Terbaru</h2>
+            <p>Informasi dan kabar terbaru melalui Media Sosial</p>
+        </div>
+ 
+        <div class="update-slider">
+            <button class="update-nav prev" id="featuredPrev" aria-label="Sebelumnya">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div class="update-track" id="featuredContainer"></div>
+ 
+            <button class="update-nav next" id="featuredNext" aria-label="Selanjutnya">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
 
 <section class="tentang"> <!-- TENTANG ORGANISASI -->
     <img src="/assets/img/logo-fosbon.png" alt="logo" class="logo-tentang">
@@ -108,6 +129,8 @@
 
 
 <script src="/js/nav.js"></script>
+<script src="/js/update-data.js"></script>
+<script src="/js/update.js"></script>
 <script src="/js/home.js"></script>
 
 </body>
