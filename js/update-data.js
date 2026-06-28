@@ -1,38 +1,5 @@
 const updateData = [
     {
-        judul: "H-2 👀",
-        tanggal: "28 Juni 2026",
-        gambar: "/assets/img/update-img10.png",
-        excerpt: "something is calling you👀.",
-        url: "https://instagram.com/p/DaCBk1bE4B_/?img_index=1"
-    },
-    {
-        judul: "📢✨ OPEN REGISTRATION ISLT & MEDIA EDUKASI 2026 RESMI DIBUKA! ✨📢.",
-        tanggal: "18 Juni 2026",
-        gambar: [
-            "/assets/img/update-img1.jpg",
-            "/assets/img/update-img2.jpg"
-        ],
-        excerpt: "📌 Persyaratan Peserta:\n1. Ketua OSIS/MPK/Forum OSIS/MPK aktif periode berjalan, dapat dialihkan pada DPH dengan melampirkan surat mandat.\n2. Memiliki keinginan yang kuat untuk berkontribusi membangun negeri\n3. Mengisi formulir pendaftaran dengan lengkap\n4. Melengkapi seluruh berkas administrasi yang dipersyaratkan\n5. Mengunggah twibbon dan mengikuti ketentuan publikasi yang telah ditetapkan.\n\n🗓️ Timeline Pendaftaran:\nSenin, 15 Juni 2026 – Minggu, 28 Juni 2026\n\n✨ Pengumuman Kelulusan Peserta:\nSenin, 12 Juli 2026\n\nContact Person: 0851-8570-8205 (MINHA)",
-        url: [
-            { label: "Lihat di Instagram", url: "https://instagram.com/p/DZrm5xazw3v/" },
-            { label: "Lihat di Instagram", url: "https://instagram.com/p/DZrnFmyTG-H/" }
-        ]
-    },
-    {
-        judul: "✨ KAJIAN MUSLIM HIJRAH FEST & LOMBA ESAI 1448 H ✨",
-        tanggal: "17 Juni 2026",
-        gambar: [
-            "/assets/img/update-img3.jpg",
-            "/assets/img/update-img4.jpg"
-        ],
-        excerpt: "Sambut Tahun Baru Islam 1448 H dengan semangat baru! Yuk, ikut bergabung dalam Kajian Muslim Hijrah Fest dengan tema Hijrah Hati, Tumbuh Menjadi Muslim & Muslimah Lebih Berarti\n​Menghadirkan pembicara luar biasa, Kak Arsya Amarlaily A A.Md.T, S.Pd (Pembicara internasional di Kairo, Turki, Jepang, Iran, & Korea).\n​Save the Date!\n📆 Hari/Tanggal: Ahad, 28 Juni 2026\n⏰ Waktu: 08.00 WITA - Selesai\n📍 Tempat: Masjid Terapung Darul Irsyad Al-Muhajirin, Kota Bontang\n\n🎁 RANGKAIAN ACARA:\nKajian Inspiratif & Sharing Session\nTanya Jawab Interaktif\nLomba Esai Terbaik (Kategori Pelajar SMA & Mahasiswa) dengan tema seru seputar Hijrah!\n\n📌 INFORMASI PENDAFTARAN:\n💰 100% GRATIS! (Kuota Terbatas)\n🗓 Periode Daftar Kajian: 17 - 27 Juni 2026\n🗓 Batas Pengumpulan Esai: 25 Juni 2026\n\nNarahubung:\n📞 083849813906 (Kak Neng)\n\nYuk, siapkan diri dan karya terbaikmu. Kuota terbatas, jadi jangan sampai kelewatan ya! 🚀",
-        url: [
-            { label: "Lihat di Instagram", url: "https://instagram.com/p/DZrbT4vR6dq/" },
-            { label: "Lihat di Instagram", url: "https://instagram.com/p/DZrnFmyTG-H/" }
-        ]
-    },
-    {
         judul: "✨ Dokumentasi S.U.A.R.A (Solidaritas Untuk Anti Pelecehan dan rasa Aman) ✨.",
         tanggal: "24 Mei 2026",
         gambar: "/assets/img/update-img5.png",
