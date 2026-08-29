@@ -1,10 +1,10 @@
 const sliderData = [
-    "/assets/img/bg-home(1).png",
-    "/assets/img/bg-home(2).png",
-    "/assets/img/bg-home(3).png",
-    "/assets/img/bg-home(4).png",
-    "/assets/img/bg-home(5).png",
-    "/assets/img/bg-home(6).png"
+    "/assets/img/bg-home(1).webp",
+    "/assets/img/bg-home(2).webp",
+    "/assets/img/bg-home(3).webp",
+    "/assets/img/bg-home(4).webp",
+    "/assets/img/bg-home(5).webp",
+    "/assets/img/bg-home(6).webp"
 ];
 
 let currentSlide = 0;
@@ -128,162 +128,162 @@ function tutupGallery(event) {
 const schoolData = [
     {
         id: "SMPN1",
-        logo: "/assets/img/logo-spansa.png",
+        logo: "/assets/img/logo-spansa.webp",
         nama: "SMPN 1 BTG",
         jumlah: 5,
         anggota: [
-            "/assets/img/spansa_ajeng.png",
-            "/assets/img/spansa_annisa.png",
-            "/assets/img/spansa_dwilya.png",
-            "/assets/img/spansa_nopal.png",
-            "/assets/img/spansa_rasya.png"
+            "/assets/img/spansa_ajeng.webp",
+            "/assets/img/spansa_annisa.webp",
+            "/assets/img/spansa_dwilya.webp",
+            "/assets/img/spansa_nopal.webp",
+            "/assets/img/spansa_rasya.webp"
         ]
     },
     {
         id: "SMPN5",
-        logo: "/assets/img/logo-smpn5.png",
+        logo: "/assets/img/logo-smpn5.webp",
         nama: "SMPN 5 BTG",
         jumlah: 1,
         anggota: [
-            "/assets/img/smpn5_asyifa.png"
+            "/assets/img/smpn5_asyifa.webp"
         ]
     },
     {
         id: "SMPN8",
-        logo: "/assets/img/logo-smpn8.png",
+        logo: "/assets/img/logo-smpn8.webp",
         nama: "SMPN 8 BTG",
         jumlah: 1,
         anggota: [
-            "/assets/img/smpn8_najma.png"
+            "/assets/img/smpn8_najma.webp"
         ]
     },
     {
         id: "YABIS_SMP",
-        logo: "/assets/img/logo-yabis.png",
+        logo: "/assets/img/logo-yabis.webp",
         nama: "SMP IT YABIS",
         jumlah: 1,
         anggota: [
-            "/assets/img/smp_yabis_qiano.png"
+            "/assets/img/smp_yabis_qiano.webp"
         ]
     },
     {
         id: "YPK",
-        logo: "/assets/img/logo-ypk.png",
+        logo: "/assets/img/logo-ypk.webp",
         nama: "SMP YPK",
         jumlah: 3,
         anggota: [
-            "/assets/img/smp_ypk_firyal.png",
-            "/assets/img/smp_ypk_nadine.png",
-            "/assets/img/smp_ypk_ravil.png"
+            "/assets/img/smp_ypk_firyal.webp",
+            "/assets/img/smp_ypk_nadine.webp",
+            "/assets/img/smp_ypk_ravil.webp"
         ]
     },
     {
         id: "SMANSA",
-        logo: "/assets/img/logo-smansa.png",
+        logo: "/assets/img/logo-smansa.webp",
         nama: "SMAN 1 BTG",
         jumlah: 2,
         anggota: [
-            "/assets/img/smansa_azka.png",
-            "/assets/img/smansa_sabil.png",
+            "/assets/img/smansa_azka.webp",
+            "/assets/img/smansa_sabil.webp",
         ]
     },
     {
         id: "SMANDA",
-        logo: "/assets/img/logo-smanda.png",
+        logo: "/assets/img/logo-smanda.webp",
         nama: "SMAN 2 BTG",
         jumlah: 3,
         anggota: [
-            "/assets/img/smanda_khumaira.png",
-            "/assets/img/smanda_najwa.png",
-            "/assets/img/smanda_vebry.png"
+            "/assets/img/smanda_khumaira.webp",
+            "/assets/img/smanda_najwa.webp",
+            "/assets/img/smanda_vebry.webp"
         ]
     },
     {
         id: "SMANTIG",
-        logo: "/assets/img/logo-smantig.png",
+        logo: "/assets/img/logo-smantig.webp",
         nama: "SMAN 3 BTG",
         jumlah: 3,
         anggota: [
-            "/assets/img/smantig_mira.png",
-            "/assets/img/smantig_aji.png",
-            "/assets/img/smantig_vina.png"
+            "/assets/img/smantig_mira.webp",
+            "/assets/img/smantig_aji.webp",
+            "/assets/img/smantig_vina.webp"
         ]
     },
     {
         id: "SMAKEN",
-        logo: "/assets/img/logo-smaken.png",
+        logo: "/assets/img/logo-smaken.webp",
         nama: "SMKN 1 BTG",
         jumlah: 3,
         anggota: [
-            "/assets/img/smaken_lutfha.png",
-            "/assets/img/smaken_nauval.png",
-            "/assets/img/smaken_rasya.png"
+            "/assets/img/smaken_lutfha.webp",
+            "/assets/img/smaken_nauval.webp",
+            "/assets/img/smaken_rasya.webp"
         ]
     },
     {
         id: "SMKN3",
-        logo: "/assets/img/logo-smkn3.png",
+        logo: "/assets/img/logo-smkn3.webp",
         nama: "SMKN 3 BTG",
         jumlah: 1,
         anggota: [
-            "/assets/img/smkn3_zahran.png",
+            "/assets/img/smkn3_zahran.webp",
         ]
     },
     {
         id: "YABIS_SMA",
-        logo: "/assets/img/logo-yabis.png",
+        logo: "/assets/img/logo-yabis.webp",
         nama: "SMA IT YABIS ",
         jumlah: 2,
         anggota: [
-            "/assets/img/sma_yabis_arifin.png",
-            "/assets/img/sma_yabis_iffah.png",
+            "/assets/img/sma_yabis_arifin.webp",
+            "/assets/img/sma_yabis_iffah.webp",
         ]
     },
     {
         id: "BU",
-        logo: "/assets/img/logo-bu.png",
+        logo: "/assets/img/logo-bu.webp",
         nama: "SMA BU BTG",
         jumlah: 2,
         anggota: [
-            "/assets/img/bu_aldi.png",
-            "/assets/img/bu_tiara.png",
+            "/assets/img/bu_aldi.webp",
+            "/assets/img/bu_tiara.webp",
         ]
     },
     {
         id: "DHBS",
-        logo: "/assets/img/logo-dhbs.png",
+        logo: "/assets/img/logo-dhbs.webp",
         nama: "SMA IT DHBS",
         jumlah: 2,
         anggota: [
-            "/assets/img/dhbs_syamil.png",
-            "/assets/img/dhbs_vio.png",
+            "/assets/img/dhbs_syamil.webp",
+            "/assets/img/dhbs_vio.webp",
         ]
     },
     {
         id: "YPK_SMA",
-        logo: "/assets/img/logo-ypk.png",
+        logo: "/assets/img/logo-ypk.webp",
         nama: "SMA YPK",
         jumlah: 1,
         anggota: [
-            "/assets/img/sma_ypk_rafie.png",
+            "/assets/img/sma_ypk_rafie.webp",
         ]
     },
     {
         id: "SMKS",
-        logo: "/assets/img/logo-smkn.png",
+        logo: "/assets/img/logo-smkn.webp",
         nama: "SMKS NUSMAN",
         jumlah: 1,
         anggota: [
-            "/assets/img/smks_andika.png"
+            "/assets/img/smks_andika.webp"
         ]
     },
     {
         id: "YKPP",
-        logo: "/assets/img/logo-ykpp.png",
+        logo: "/assets/img/logo-ykpp.webp",
         nama: "SMKS YKPP",
         jumlah: 1,
         anggota: [
-            "/assets/img/ykpp_adinda.png",
+            "/assets/img/ykpp_adinda.webp",
         ]
     },
 ];
@@ -374,22 +374,22 @@ const galleryData = [
         {
             judul: "LDK",
             tanggal: "11 Januari 2026",
-            gambar: "/assets/img/gallery-fosbon(7).png"
+            gambar: "/assets/img/gallery-fosbon(7).webp"
         },
         {
             judul: "PELANTIKAN PENGURUS",
             tanggal: "14 Februari 2026",
-            gambar: "/assets/img/gallery-fosbon(3).png"
+            gambar: "/assets/img/gallery-fosbon(3).webp"
         },
         {
             judul: "MALAM KEAKRABAN",
             tanggal: "15 Februari 2026",
-            gambar: "/assets/img/gallery-fosbon(5).png"
+            gambar: "/assets/img/gallery-fosbon(5).webp"
         },
         {
             judul: "RAPAT KERJA",
             tanggal: "28 Februari 2026",
-            gambar: "/assets/img/gallery-fosbon(1).png"
+            gambar: "/assets/img/gallery-fosbon(1).webp"
         },
         {
             judul: "BUKBER",
@@ -399,12 +399,12 @@ const galleryData = [
         {
             judul: "FOSRAN",
             tanggal: "14 Maret 2026",
-            gambar: "/assets/img/gallery-fosbon(4).png"
+            gambar: "/assets/img/gallery-fosbon(4).webp"
         },
         {
             judul: "FOSBON CLASS",
             tanggal: "2 Mei 2026",
-            gambar: "/assets/img/gallery-fosbon(2).png"
+            gambar: "/assets/img/gallery-fosbon(2).webp"
         }
     ];
 

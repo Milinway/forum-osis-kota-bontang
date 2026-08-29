@@ -3,7 +3,7 @@ const beritaData = [
         id: "fosran2026",
         judul: "FOSRAN 2026 Berjalan Lancar, Tebar Kepedulian di Bulan Ramadhan",
         tanggal: "14 Maret 2026",
-        gambar: "/assets/img/gallery-fosbon(4).png",
+        gambar: "/assets/img/gallery-fosbon(4).webp",
         excerpt: "Kegiatan FOSRAN (Forum OSIS Sahabat Ramadhan) telah berhasil dilaksanakan dengan lancar...",
         isi: `
             <p>Kegiatan FOSRAN (Forum OSIS Sahabat Ramadhan) telah berhasil dilaksanakan dengan lancar pada Sabtu, 14 Maret 2026 bertempat di teras atas belakang Masjid Terapung, mulai pukul 16.15 WITA. Kegiatan ini menjadi salah satu bentuk nyata kepedulian sosial pelajar dalam menyambut dan mengisi bulan suci Ramadhan dengan semangat berbagi serta kebersamaan.</p>
@@ -23,7 +23,7 @@ const beritaData = [
         id: "fosbon-class",
         judul: "FOSBON CLASS 2026: “UNLEASHA” Jadi Wadah Pelajar Mengembangkan Public Speaking dan Rasa Percaya Diri",
         tanggal: "06 MEI 2026",
-        gambar: "/assets/img/gallery-fosbon(2).png",
+        gambar: "/assets/img/gallery-fosbon(2).webp",
         excerpt: "Forum OSIS Bontang (FOSBON) kembali menghadirkan kegiatan edukatif dan inspiratif melalui program...",
         isi: `
             <p>Forum OSIS Bontang (FOSBON) kembali menghadirkan kegiatan edukatif dan inspiratif melalui program FOSBON CLASS – Pelatihan Public Speaking yang dilaksanakan pada Sabtu, 2 Mei 2026 di BPU Kecamatan Bontang Utara. Kegiatan ini mengusung tema “UNLEASHA” (Unleash Your Inner Speaker) yang memiliki makna melepaskan potensi diri dalam berbicara di depan umum dan menemukan suara percaya diri yang ada dalam diri setiap peserta.</p>
@@ -41,7 +41,7 @@ const beritaData = [
         id: "ldk",
         judul: "LDK FORUM OSIS BONTANG: Membangun Jiwa Kepemimpinan dan Pengembangan Diri Pengurus OSIS",
         tanggal: "11 Januari 2026",
-        gambar: "/assets/img/gallery-fosbon(7).png",
+        gambar: "/assets/img/gallery-fosbon(7).webp",
         excerpt: "Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai...",
         isi: `
             <p>Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai upaya membentuk karakter, meningkatkan kualitas kepemimpinan, serta mengembangkan kemampuan pengurus dalam berorganisasi. Kegiatan ini dilaksanakan di BPU Bontang Selatan dan diikuti oleh sebanyak 34 pengurus Forum OSIS Bontang.</p>
@@ -56,7 +56,7 @@ const beritaData = [
         id: "prograsa",
         judul: "PROGRASA (Progres Rasa): ",
         tanggal: "11 Januari 2026",
-        gambar: "/assets/img/gallery-fosbon(7).png",
+        gambar: "/assets/img/gallery-fosbon(7).webp",
         excerpt: "Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai...",
         isi: `
             <p>Forum OSIS Bontang (FOSBON) melaksanakan kegiatan Latihan Dasar Kepemimpinan (LDK) sebagai upaya membentuk karakter, meningkatkan kualitas kepemimpinan, serta mengembangkan kemampuan pengurus dalam berorganisasi. Kegiatan ini dilaksanakan di BPU Bontang Selatan dan diikuti oleh sebanyak 34 pengurus Forum OSIS Bontang.</p>

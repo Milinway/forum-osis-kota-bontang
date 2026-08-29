@@ -468,7 +468,7 @@ body {
 
 .footer {
     position: relative;
-    background: url("../assets/img/footer-bg.png") center/cover no-repeat;
+    background: url("../assets/img/footer-bg.webp") center/cover no-repeat;
     padding: 20px 20px;
     overflow: hidden;
 }
