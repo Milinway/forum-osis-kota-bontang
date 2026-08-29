@@ -369,7 +369,7 @@ const galleryData = [
         {
             judul: "MUSYAWARAH BESAR ANGKATAN 11",
             tanggal: "14 Desember 2025",
-            gambar: "/assets/img/gallery-fosbon(6).jpg"
+            gambar: "/assets/img/gallery-fosbon(6).webp"
         },
         {
             judul: "LDK",
@@ -394,7 +394,7 @@ const galleryData = [
         {
             judul: "BUKBER",
             tanggal: "14 Maret 2026",
-            gambar: "/assets/img/gallery-fosbon(2).jpeg"
+            gambar: "/assets/img/galeri/bukber.webp"
         },
         {
             judul: "FOSRAN",

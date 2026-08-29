@@ -5,7 +5,7 @@ const galleryData = [
     {
         id: "musyawarah",
         title: "MUSYAWARAH BESAR ANGKATAN 11",
-        cover: "/assets/img/gallery-fosbon(6).jpg",
+        cover: "/assets/img/galeri/musyawarah.webp",
         images: [
             "/assets/img/galeri/musyawarah.webp",
         ],
@@ -13,7 +13,7 @@ const galleryData = [
     {
         id: "ldk",
         title: "LDK",
-        cover: "/assets/img/gallery-fosbon(7).webp",
+        cover: "/assets/img/galeri/ldk(8).webp",
         images: [
             "/assets/img/galeri/ldk(1).webp",
             "/assets/img/galeri/ldk(2).webp",
@@ -28,7 +28,7 @@ const galleryData = [
     {
         id: "pelantikan",
         title: "PELANTIKAN PENGURUS",
-        cover: "/assets/img/gallery-fosbon(3).webp",
+        cover: "/assets/img/galeri/pelantikan(1).webp",
         images: [
             "/assets/img/galeri/pelantikan(1).webp",
             "/assets/img/galeri/pelantikan(2).webp",
@@ -42,7 +42,7 @@ const galleryData = [
     {
         id: "makrab",
         title: "MALAM KEAKRABAN",
-        cover: "/assets/img/gallery-fosbon(5).webp",
+        cover: "/assets/img/galeri/makrab(1).webp",
         images: [
             "/assets/img/galeri/makrab(1).webp",
             "/assets/img/galeri/makrab(2).webp",
@@ -52,7 +52,7 @@ const galleryData = [
     {
         id: "raker",
         title: "RAPAT KERJA",
-        cover: "/assets/img/gallery-fosbon(1).webp",
+        cover: "/assets/img/galeri/raker.webp",
         images: [
             "/assets/img/galeri/raker.webp",
         ],
@@ -60,7 +60,7 @@ const galleryData = [
     {
         id: "bukber",
         title: "BUKBER",
-        cover: "/assets/img/gallery-fosbon(3).jpeg",
+        cover: "/assets/img/galeri/bukber.webp",
         images: [
             "/assets/img/galeri/bukber.webp",
         ],
@@ -68,7 +68,7 @@ const galleryData = [
     {
         id: "fosran",
         title: "FOSRAN",
-        cover: "/assets/img/gallery-fosbon(4).webp",
+        cover: "/assets/img/galeri/fosran(9).webp",
         images: [
             "/assets/img/galeri/fosran(8).webp",
             "/assets/img/galeri/fosran(9).webp",
@@ -82,7 +82,7 @@ const galleryData = [
     {
         id: "fosclass",
         title: "FOSBON CLASS",
-        cover: "/assets/img/gallery-fosbon(2).webp",
+        cover: "/assets/img/galeri/fosbonclass(2).webp",
         images: [
             "/assets/img/galeri/fosbonclass(1).webp",
             "/assets/img/galeri/fosbonclass(2).webp",
